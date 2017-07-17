@@ -8,6 +8,8 @@ public class Variables
     [HideInInspector]
     public Rigidbody player;
     public bool grounded = true;
+	public GameObject ChildModel;
+	public Vector3 CurrentRotation;
 
     [Header("Movement")]
     public float forwardSpeed = 10f;
@@ -32,48 +34,40 @@ public class Player_Movement : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
-    {
+	{
 
-        Vector3 Direction = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-        Direction = Camera.main.transform.TransformDirection(Direction);
-        Direction.y = 0f;
-        Vector3 currentPos = Variables.player.transform.position;
+		Vector3 Direction = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0f, Input.GetAxisRaw ("Vertical"));
+		Direction = Camera.main.transform.TransformDirection (Direction);
+		Direction.y = 0f;
+		Vector3 currentPos = Variables.player.transform.position;
 
-        //commented out new changes to accomadate current level that need old movement;
+		if (Input.GetAxis ("Jump") == 1) {
+			if (Variables.grounded == true) {
+				Variables.grounded = false;
+				Variables.player.velocity = (new Vector3 (0f, Input.GetAxis ("Jump") * Variables.jumpForce, 0f));
 
+			}
+		}
 
-        if (Input.GetAxis("Jump") == 1)
-        {
-            if (Variables.grounded == true)
-            {
+		if (Input.GetKey ("right shift") || Input.GetKey ("left shift") || Input.GetKey ("joystick button 8")) {
 
-                Variables.grounded = false;
+			Variables.player.position = (transform.position + Direction * Time.deltaTime * Variables.sprintSpeed);
 
-                Variables.player.velocity = (new Vector3(0f, Input.GetAxis("Jump") * Variables.jumpForce, 0f));
+		} else {
+			Variables.player.position = (transform.position + Direction * Time.deltaTime * Variables.forwardSpeed);
+		}
 
-            }
-        }
+		if (Input.GetAxisRaw ("Horizontal") != 0f || Input.GetAxisRaw ("Vertical") != 0f) {
+			Vector3 Movement = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0f, Input.GetAxisRaw ("Vertical"));
+			Movement = Camera.main.transform.TransformDirection (Movement);
+			Movement.y = 0f;
+			Variables.ChildModel.transform.rotation = Quaternion.LookRotation (Movement) * Quaternion.Inverse (Quaternion.Euler (0f, 0f, 0f));
+			Variables.CurrentRotation = Variables.ChildModel.transform.eulerAngles;
+		} else {
+			Variables.ChildModel.transform.eulerAngles = Variables.CurrentRotation;
+		}
 
-        if (Input.GetKey("right shift") || Input.GetKey("left shift") || Input.GetKey("joystick button 8"))
-        {
-
-            Variables.player.position = (transform.position + Direction * Time.deltaTime * Variables.sprintSpeed);
-
-        }
-
-        else
-        {
-            Variables.player.position = (transform.position + Direction * Time.deltaTime * Variables.forwardSpeed);
-        }
-
-        if (Input.GetAxisRaw("Horizontal") != 0f || Input.GetAxisRaw("Vertical") != 0f)
-        {
-            Vector3 Movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-            Movement = Camera.main.transform.TransformDirection(Movement);
-            Movement.y = 0f;
-        }
-    }
-
+	}
     void OnCollisionStay(Collision col)
     {
         Variables.grounded = true;
