@@ -14,7 +14,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public enum State
         {
             PATROL,
-            CHASE,
+            HURT,
             INVESTIGATE
 
 
@@ -34,6 +34,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         public float chaseSpeed = 1f;
         public GameObject target;
+        public float hurttimer = 5;
 
         //Variables for investigating
         private Vector3 investigateSpot;
@@ -76,8 +77,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                     case State.PATROL:
                         Patrol();
                         break;
-                    case State.CHASE:
-                        Chase();
+                    case State.HURT:
+                        Hurt();
                         break;
                     case State.INVESTIGATE:
                         Investigate();
@@ -105,14 +106,26 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 character.Move(Vector3.zero, false, false);
             }
+            Debug.Log("going to checkpoint");
         }
 
-        void Chase()
+        void Hurt()
         {
-            agent.speed = chaseSpeed;
-            agent.SetDestination(target.transform.position);
-            character.Move(agent.desiredVelocity, false, false);
+            // agent.speed = chaseSpeed;
+            // agent.SetDestination(target.transform.position);
+            //character.Move(agent.desiredVelocity, false, false);
+            
+            timer += Time.deltaTime;
 
+            agent.SetDestination(this.transform.position);
+            character.Move(Vector3.zero, false, false);
+            Debug.Log("Hurting plYER");
+            transform.LookAt(investigateSpot);
+            if (timer >= hurttimer)
+            {
+                state = TestScriptII.State.PATROL;
+                timer = 0;
+            }
         }
 
         void Investigate()
@@ -121,7 +134,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             
             agent.SetDestination(this.transform.position);
             character.Move(Vector3.zero, false, false);
-
+            Debug.Log("investigating area");
             transform.LookAt(investigateSpot);
             if (timer >= investigateWait)
             {
@@ -151,24 +164,48 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 if (hit.collider.gameObject.tag == "Player")
                 {
-                    state = TestScriptII.State.CHASE;
+                    state = TestScriptII.State.HURT;
                     target = hit.collider.gameObject;
+                }
+                else
+                {
+                    if (timer >= investigateWait)
+                    {
+                        state = TestScriptII.State.PATROL;
+                        timer = 0;
+                    }
                 }
             }
             if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, (transform.forward + transform.right).normalized, out hit, sightDist))
             {
                 if (hit.collider.gameObject.tag == "Player")
                 {
-                    state = TestScriptII.State.CHASE;
+                    state = TestScriptII.State.HURT;
                     target = hit.collider.gameObject;
+                }
+                else
+                {
+                    if (timer >= investigateWait)
+                    {
+                        state = TestScriptII.State.PATROL;
+                        timer = 0;
+                    }
                 }
             }
             if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, (transform.forward - transform.right).normalized, out hit, sightDist))
             {
                 if (hit.collider.gameObject.tag == "Player")
                 {
-                    state = TestScriptII.State.CHASE;
+                    state = TestScriptII.State.HURT;
                     target = hit.collider.gameObject;
+                }
+                else
+                {
+                    if (timer >= investigateWait)
+                    {
+                        state = TestScriptII.State.PATROL;
+                        timer = 0;
+                    }
                 }
             }
         }
