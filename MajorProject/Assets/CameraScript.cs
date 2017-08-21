@@ -6,6 +6,7 @@ public class CameraScript : MonoBehaviour {
 
     public Transform cameraAt;
     public GameObject Player;
+	public int Speed = 5;
 
     void OnEnable()
     {
@@ -20,6 +21,6 @@ public class CameraScript : MonoBehaviour {
 	void FixedUpdate ()
     {
         transform.LookAt(Player.transform);
-        transform.RotateAround(Player.transform.position, Vector3.up, 20 * Input.GetAxis("Mouse X"));
+		transform.RotateAround(Player.transform.position, Vector3.up, Speed * Input.GetAxis("Mouse X"));
     }
 }

@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Player_Movement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AI_Possess.cs">
     <Files>
-      <File FileName="Assets\Player_Movement.cs" Line="64" Column="61" />
-      <File FileName="Assets\CameraScript.cs" Line="21" Column="6" />
+      <File FileName="Assets\Player_Movement.cs" Line="40" Column="1" />
+      <File FileName="Assets\CameraScript.cs" Line="9" Column="23" />
+      <File FileName="Assets\AI_Possess.cs" Line="23" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
