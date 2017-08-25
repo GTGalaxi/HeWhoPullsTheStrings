@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scene/New Test.unity
+=======
+- path: Assets/Scene/Ai Waypoint.unity
+>>>>>>> d9303a9bec6f0bd017dfdd6d4fe5d32661b471d3
   isLoaded: 1
   isActive: 1

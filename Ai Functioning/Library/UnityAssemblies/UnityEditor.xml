@@ -4340,7 +4340,11 @@ See DecoratorDrawer for an example of how to use this.</para>
     </member>
     <member name="T:UnityEditor.DefaultAsset">
       <summary>
+<<<<<<< HEAD
         <para>DefaultAsset is used for assets that do not have a specific type (yet).</para>
+=======
+        <para>DefaultAsset is used for assets that does not have a specific type (yet).</para>
+>>>>>>> d9303a9bec6f0bd017dfdd6d4fe5d32661b471d3
       </summary>
     </member>
     <member name="M:UnityEditor.DefaultAsset.#ctor">
@@ -12094,6 +12098,7 @@ More information - https:msdn.microsoft.comen-uslibrary/dn584397(v=vs.110).aspx.
       <summary>
         <para>Select a new build target to be active.</para>
       </summary>
+<<<<<<< HEAD
       <param name="target">Target build platform.</param>
       <param name="targetGroup">Build target group.</param>
       <returns>
@@ -12106,6 +12111,9 @@ More information - https:msdn.microsoft.comen-uslibrary/dn584397(v=vs.110).aspx.
       </summary>
       <param name="target">Target build platform.</param>
       <param name="targetGroup">Build target group.</param>
+=======
+      <param name="target"></param>
+>>>>>>> d9303a9bec6f0bd017dfdd6d4fe5d32661b471d3
       <returns>
         <para>True if the build target was successfully switched, false otherwise (for example, if license checks fail, files are missing, or if the user has cancelled the operation via the UI).</para>
       </returns>
@@ -14955,7 +14963,11 @@ Note: Use HandleUtility.GetHandleSize where you might want to have constant scre
     </member>
     <member name="P:UnityEditor.IMGUI.Controls.PrimitiveBoundsHandle.midpointHandleSizeFunction">
       <summary>
+<<<<<<< HEAD
         <para>An optional Handles.SizeFunction to specify how large the control handles should be in the space of Handles.matrix. Defaults to a fixed screen-space size.</para>
+=======
+        <para>An optional Handles.HandleSizeFunction to specify how large the control handles should be in the space of Handles.matrix. Defaults to a fixed screen-space size.</para>
+>>>>>>> d9303a9bec6f0bd017dfdd6d4fe5d32661b471d3
       </summary>
     </member>
     <member name="P:UnityEditor.IMGUI.Controls.PrimitiveBoundsHandle.wireframeColor">
@@ -16956,6 +16968,7 @@ GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
       <param name="label"></param>
       <param name="position"></param>
     </member>
+<<<<<<< HEAD
     <member name="M:UnityEditor.MaterialEditor.DoubleSidedGIField">
       <summary>
         <para>Display UI for editing a material's Double Sided Global Illumination setting.
@@ -16966,6 +16979,8 @@ Returns true if the UI is indeed displayed i.e. the material supports the Double
         <para>True if the UI is displayed, false otherwise.</para>
       </returns>
     </member>
+=======
+>>>>>>> d9303a9bec6f0bd017dfdd6d4fe5d32661b471d3
     <member name="M:UnityEditor.MaterialEditor.EmissionEnabledProperty">
       <summary>
         <para>This function will draw the UI for controlling whether emission is enabled or not on a material.</para>
@@ -17957,7 +17972,11 @@ See Also: MaterialLightmapFlags.</para>
     </member>
     <member name="T:UnityEditor.MenuCommand">
       <summary>
+<<<<<<< HEAD
         <para>Used to extract the context for a MenuItem.</para>
+=======
+        <para>Used to extract the context for a MenuItem. MenuCommand objects are passed to custom menu item functions defined using the MenuItem attribute.</para>
+>>>>>>> d9303a9bec6f0bd017dfdd6d4fe5d32661b471d3
       </summary>
     </member>
     <member name="F:UnityEditor.MenuCommand.context">
@@ -22262,7 +22281,11 @@ For more information - https:msdn.microsoft.comlibrarywindowsappshh779671https:m
     </member>
     <member name="T:UnityEditor.Rendering.PlatformShaderSettings">
       <summary>
+<<<<<<< HEAD
         <para>Used to set up shader settings, per-platform and per-shader-hardware-tier.</para>
+=======
+        <para>Used to set up shader settings, per-platorm and per-shader-hardware-tier.</para>
+>>>>>>> d9303a9bec6f0bd017dfdd6d4fe5d32661b471d3
       </summary>
     </member>
     <member name="F:UnityEditor.Rendering.PlatformShaderSettings.cascadedShadowMaps">
