@@ -22,5 +22,6 @@ public class CameraScript : MonoBehaviour {
     {
         transform.LookAt(Player.transform);
 		transform.RotateAround(Player.transform.position, Vector3.up, Speed * Input.GetAxis("Mouse X"));
+		transform.RotateAround(Player.transform.position, Vector3.right, Speed * Input.GetAxis("Mouse Y"));
     }
 }

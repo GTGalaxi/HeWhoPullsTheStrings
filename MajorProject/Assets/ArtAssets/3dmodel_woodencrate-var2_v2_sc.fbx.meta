@@ -1,0 +1,183 @@
+fileFormatVersion: 2
+guid: 66ad1fb66610ab04ab40ba699ca6164e
+timeCreated: 1503314768
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: extra_plank
+    100004: extra_plank 1
+    100006: extra_plank 2
+    100008: extra_plank 3
+    100010: extra_plank 4
+    100012: extra_plank 5
+    100014: extra_plank 6
+    100016: extra_plank1
+    100018: extra_plank1 1
+    100020: extra_plank1 2
+    100022: extra_plank1 3
+    100024: extra_plank1 4
+    100026: extra_plank1 5
+    100028: extra_plank1 6
+    100030: extra_planks
+    100032: wooden_crate 1
+    100034: x_planks3
+    100036: x_planks4
+    100038: x_planks5
+    100040: x_planks6
+    100042: x_planks7
+    100044: x_planks8
+    100046: x_planks9
+    400000: //RootNode
+    400002: extra_plank
+    400004: extra_plank 1
+    400006: extra_plank 2
+    400008: extra_plank 3
+    400010: extra_plank 4
+    400012: extra_plank 5
+    400014: extra_plank 6
+    400016: extra_plank1
+    400018: extra_plank1 1
+    400020: extra_plank1 2
+    400022: extra_plank1 3
+    400024: extra_plank1 4
+    400026: extra_plank1 5
+    400028: extra_plank1 6
+    400030: extra_planks
+    400032: wooden_crate 1
+    400034: x_planks3
+    400036: x_planks4
+    400038: x_planks5
+    400040: x_planks6
+    400042: x_planks7
+    400044: x_planks8
+    400046: x_planks9
+    2300000: extra_plank
+    2300002: extra_plank 1
+    2300004: extra_plank 2
+    2300006: extra_plank 3
+    2300008: extra_plank 4
+    2300010: extra_plank 5
+    2300012: extra_plank 6
+    2300014: extra_plank1
+    2300016: extra_plank1 1
+    2300018: extra_plank1 2
+    2300020: extra_plank1 3
+    2300022: extra_plank1 4
+    2300024: extra_plank1 5
+    2300026: extra_plank1 6
+    2300028: wooden_crate 1
+    3300000: extra_plank
+    3300002: extra_plank 1
+    3300004: extra_plank 2
+    3300006: extra_plank 3
+    3300008: extra_plank 4
+    3300010: extra_plank 5
+    3300012: extra_plank 6
+    3300014: extra_plank1
+    3300016: extra_plank1 1
+    3300018: extra_plank1 2
+    3300020: extra_plank1 3
+    3300022: extra_plank1 4
+    3300024: extra_plank1 5
+    3300026: extra_plank1 6
+    3300028: wooden_crate 1
+    4300000: wooden_crate
+    4300002: extra_plank1
+    4300004: extra_plank
+    4300006: extra_plank1
+    4300008: extra_plank
+    4300010: extra_plank1
+    4300012: extra_plank
+    4300014: extra_plank1
+    4300016: extra_plank
+    4300018: extra_plank1
+    4300020: extra_plank
+    4300022: extra_plank1
+    4300024: extra_plank
+    4300026: extra_plank1
+    4300028: extra_plank
+    6400000: extra_plank
+    6400002: extra_plank 1
+    6400004: extra_plank 2
+    6400006: extra_plank 3
+    6400008: extra_plank 4
+    6400010: extra_plank 5
+    6400012: extra_plank 6
+    6400014: extra_plank1
+    6400016: extra_plank1 1
+    6400018: extra_plank1 2
+    6400020: extra_plank1 3
+    6400022: extra_plank1 4
+    6400024: extra_plank1 5
+    6400026: extra_plank1 6
+    6400028: wooden_crate 1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

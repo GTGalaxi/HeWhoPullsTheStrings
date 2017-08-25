@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/WhiteBox.unity
+- path: Assets/Scenes/GreyBox.unity
   isLoaded: 1
   isActive: 1
