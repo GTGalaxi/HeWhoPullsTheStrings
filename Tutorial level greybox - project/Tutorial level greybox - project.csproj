@@ -108,6 +108,7 @@
     <Compile Include="Assets\Programming Work (Not implemented)\Scripts\Key.cs" />
     <Compile Include="Assets\Programming Work (Not implemented)\Scripts\KeyScript.cs" />
     <Compile Include="Assets\Programming Work (Not implemented)\Scripts\MagnetRune.cs" />
+    <Compile Include="Assets\Programming Work (Not implemented)\Scripts\Targetingsystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

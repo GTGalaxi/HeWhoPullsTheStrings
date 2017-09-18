@@ -4,12 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MagnetRune : MonoBehaviour {
+    
+    //Raycasting
+    public float heightMultiplier;
+    public float sightDist = 10;
+    Renderer objRenderer;
+    public Material newMtrl;
+    public Material oldMtrl;
+    public GameObject obj;
 
     public GameObject magnetRune;
-    public bool collectMRune = false;
-    public bool collectKey = false;
+    public bool collectMRune = true;
+    public bool collectKey = true;
     public int timeSinceCollision;
-    public bool seeMrune = false;
+    public bool seeMrune = true;
 
     public Text visionRune;
     public Text magnetText;
@@ -25,6 +33,9 @@ public class MagnetRune : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        RaycastHit hit;
+        Debug.DrawRay(transform.position + Vector3.up * heightMultiplier, transform.forward * sightDist, Color.green);
 
         if (Input.GetMouseButton(0) && seeMrune == false)
         {
