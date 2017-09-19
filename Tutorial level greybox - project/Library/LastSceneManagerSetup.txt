@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/TargetingSystem.unity
-=======
-- path: Assets/Scenes/AI Test.unity
->>>>>>> 50ae49dc46f00fcff5e153770d56337548df4332
+- path: Assets/Scenes/GreyBox.unity
   isLoaded: 1
   isActive: 1
