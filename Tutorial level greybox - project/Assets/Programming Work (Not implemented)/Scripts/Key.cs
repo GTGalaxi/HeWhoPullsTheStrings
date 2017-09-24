@@ -24,15 +24,16 @@ public class Key : MonoBehaviour {
     void Update()
     {
 
-        float distance = Vector3.Distance(transform.position, target.position);
-        print(distance);
+        GameObject thePlayer = GameObject.Find("MainCamera");
+        MagnetRune magnetScript = thePlayer.GetComponent<MagnetRune>();
 
-        if (magnetrune.collectMRune == true && Input.GetMouseButton(0))
+
+        float distance = Vector3.Distance(transform.position, target.position);
+
+        if (magnetScript.HitTarget == true && Input.GetMouseButton(0))
         {
 
             activated = true;
-            magnetRunetext.enabled = false;
-
 
         }
 
@@ -46,6 +47,21 @@ public class Key : MonoBehaviour {
                 transform.position += transform.forward * speed * Time.deltaTime;
             }
         }
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+
+
+        if (other.gameObject.tag == "Player")
+        {
+            print("Collected Key");
+            Destroy(gameObject);
+
+        }
+
+
+
     }
 
 }

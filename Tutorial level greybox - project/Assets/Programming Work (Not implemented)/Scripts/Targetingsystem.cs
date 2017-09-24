@@ -26,13 +26,16 @@ public class Targetingsystem : MonoBehaviour {
         {
             if (hit.collider.gameObject.tag == "Target")
             {
+                print("hit");
             }
             else
             {
+                print("not hit");
             }
         }
         else
         {
+            print("not hit");
         }
     }
 }
