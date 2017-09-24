@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Base path: D:/Program Files/Unity/Editor/Data
 Cmd: getPlatforms
 Cmd: compileSnippet
@@ -32,3 +33,7 @@ Cmd: compileSnippet
   api=4 type=0 insize=3403 outsize=3082 kw=SHADOWS_DEPTH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
 Cmd: compileSnippet
   api=4 type=1 insize=3403 outsize=502 kw=SHADOWS_DEPTH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+=======
+Base path: C:/Program Files/Unity/Editor/Data
+Cmd: initializeCompiler
+>>>>>>> c348e530ee4596b96499cb0a5c71d9333137cebb
