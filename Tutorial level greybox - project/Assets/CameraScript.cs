@@ -15,13 +15,16 @@ public class CameraScript : MonoBehaviour {
 
     void Start ()
     {
+
+        transform.LookAt(Player.transform);
         transform.position = cameraAt.position;
     }
 	
-	void FixedUpdate ()
+	void Update ()
     {
-        transform.LookAt(Player.transform);
-		transform.RotateAround(Player.transform.position, Vector3.up, Speed * Input.GetAxis("Mouse X"));
-		transform.RotateAround(Player.transform.position, Vector3.right, Speed * Input.GetAxis("Mouse Y"));
+        transform.RotateAround(Player.transform.position, Player.transform.up, Speed * Input.GetAxis("Mouse X"));
+        Player.transform.RotateAround(Player.transform.position, Player.transform.up, Speed * Input.GetAxis("Mouse X"));
+		transform.RotateAround(Player.transform.position, Player.transform.right, Speed * Input.GetAxis("Mouse Y"));
+        transform.eulerAngles.Set(transform.eulerAngles.x, 0, transform.eulerAngles.z);
     }
 }
