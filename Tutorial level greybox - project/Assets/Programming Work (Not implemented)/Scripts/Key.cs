@@ -11,8 +11,8 @@ public class Key : MonoBehaviour {
     public float magnetRange =5;
     public Transform target;
 
-    public MagnetRune magnetrune;
-    public Text magnetRunetext;
+    public MagnetCollision magCol;
+
 
 
     void Start()
@@ -24,9 +24,8 @@ public class Key : MonoBehaviour {
     void Update()
     {
 
-        GameObject thePlayer = GameObject.Find("MainCamera");
-        MagnetRune magnetScript = thePlayer.GetComponent<MagnetRune>();
-
+        GameObject thePlayer = GameObject.Find("Hitbox");
+        MagnetCollision magnetScript = thePlayer.GetComponent<MagnetCollision>();
 
         float distance = Vector3.Distance(transform.position, target.position);
 

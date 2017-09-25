@@ -105,8 +105,10 @@
     <Compile Include="Assets\Programming Work (Not implemented)\Code\TestScript.cs" />
     <Compile Include="Assets\Programming Work (Not implemented)\Code\TestScriptIII.cs" />
     <Compile Include="Assets\Programming Work (Not implemented)\Code\TestScriptIV.cs" />
+    <Compile Include="Assets\Programming Work (Not implemented)\Scripts\DoorOpen.cs" />
     <Compile Include="Assets\Programming Work (Not implemented)\Scripts\Key.cs" />
     <Compile Include="Assets\Programming Work (Not implemented)\Scripts\KeyScript.cs" />
+    <Compile Include="Assets\Programming Work (Not implemented)\Scripts\MagnetCollision.cs" />
     <Compile Include="Assets\Programming Work (Not implemented)\Scripts\MagnetRune.cs" />
     <Compile Include="Assets\Programming Work (Not implemented)\Scripts\Playerkey.cs" />
     <Compile Include="Assets\Programming Work (Not implemented)\Scripts\Targetingsystem.cs" />
