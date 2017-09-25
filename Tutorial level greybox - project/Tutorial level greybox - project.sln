@@ -1,4 +1,5 @@
 ﻿
+<<<<<<< HEAD
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial level greybox - project.Plugins", "Tutorial level greybox - project.Plugins.csproj", "{D1BDFA20-153B-43C3-B8DD-5F943B062174}"
@@ -6,6 +7,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial level greybox - project", "Tutorial level greybox - project.csproj", "{ADE1F092-97D9-85AD-DABF-ACA6FD74402F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial level greybox - project.Editor.Plugins", "Tutorial level greybox - project.Editor.Plugins.csproj", "{CF8A6183-52D2-1301-717E-17FE1A14D48A}"
+=======
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial level greybox - project", "Assembly-CSharp-firstpass.csproj", "{C13A4631-2168-6DD1-4819-410CC40A69DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial level greybox - project", "Assembly-CSharp.csproj", "{7D59964F-70DA-01F0-A6E1-877155B26460}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial level greybox - project", "Assembly-CSharp-Editor-firstpass.csproj", "{036E9C12-CDF2-7A52-7386-F2EE7F2B02FA}"
+>>>>>>> 93bda6cff40b3b84af2237b1ba432ffb8a13e995
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +23,7 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
 		{D1BDFA20-153B-43C3-B8DD-5F943B062174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D1BDFA20-153B-43C3-B8DD-5F943B062174}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1BDFA20-153B-43C3-B8DD-5F943B062174}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -25,6 +36,20 @@ Global
 		{CF8A6183-52D2-1301-717E-17FE1A14D48A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF8A6183-52D2-1301-717E-17FE1A14D48A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF8A6183-52D2-1301-717E-17FE1A14D48A}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{C13A4631-2168-6DD1-4819-410CC40A69DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C13A4631-2168-6DD1-4819-410CC40A69DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C13A4631-2168-6DD1-4819-410CC40A69DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C13A4631-2168-6DD1-4819-410CC40A69DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D59964F-70DA-01F0-A6E1-877155B26460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D59964F-70DA-01F0-A6E1-877155B26460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D59964F-70DA-01F0-A6E1-877155B26460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D59964F-70DA-01F0-A6E1-877155B26460}.Release|Any CPU.Build.0 = Release|Any CPU
+		{036E9C12-CDF2-7A52-7386-F2EE7F2B02FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{036E9C12-CDF2-7A52-7386-F2EE7F2B02FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{036E9C12-CDF2-7A52-7386-F2EE7F2B02FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{036E9C12-CDF2-7A52-7386-F2EE7F2B02FA}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 93bda6cff40b3b84af2237b1ba432ffb8a13e995
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
