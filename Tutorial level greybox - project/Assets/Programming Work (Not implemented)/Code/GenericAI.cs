@@ -191,7 +191,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             timer += Time.deltaTime;
 
             agent.SetDestination(this.transform.position);
-            character.Move(Vector3.zero, false, false);
+            //character.Move(Vector3.zero, false, false);
             Debug.Log("Hurting plYER");
             Vector3 LookPos = target.transform.position;
             LookPos.y = transform.position.y;
