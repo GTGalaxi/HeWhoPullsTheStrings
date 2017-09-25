@@ -1,4 +1,8 @@
 sceneSetups:
-- path: Assets/Scenes/AI Test.unity
+<<<<<<< HEAD
+- path: Assets/Scenes/GreyBox - Magnet Rune Vision Rune.unity
+=======
+- path: Assets/Scenes/MainMenu.unity
+>>>>>>> 93bda6cff40b3b84af2237b1ba432ffb8a13e995
   isLoaded: 1
   isActive: 1
