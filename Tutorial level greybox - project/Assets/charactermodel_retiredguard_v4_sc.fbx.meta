@@ -1,0 +1,235 @@
+fileFormatVersion: 2
+guid: f51b3715a8ed36e40817604e6b069a94
+timeCreated: 1506347536
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: body
+    100002: //RootNode
+    100004: core
+    100006: eyepatch
+    100008: head
+    100010: joints_and_ik
+    100012: l_ankle
+    100014: l_arm_elbow
+    100016: l_arm_elbow2
+    100018: l_arm_shoulder
+    100020: l_arm_shoulder2
+    100022: l_arm_shoulderblade
+    100024: l_arm_wrist
+    100026: l_ball
+    100028: l_index_finger
+    100030: l_index_finger2
+    100032: l_index_finger3
+    100034: l_index_finger4
+    100036: l_knee
+    100038: l_leg
+    100040: l_middle_finger
+    100042: l_middle_finger2
+    100044: l_middle_finger3
+    100046: l_middle_finger4
+    100048: l_pinky_finger
+    100050: l_pinky_finger2
+    100052: l_pinky_finger3
+    100054: l_pinky_finger4
+    100056: l_ring_finger
+    100058: l_ring_finger2
+    100060: l_ring_finger3
+    100062: l_ring_finger4
+    100064: l_thumb
+    100066: l_thumb2
+    100068: l_thumb3
+    100070: l_toe
+    100072: model
+    100074: neck
+    100076: neck2
+    100078: newroot
+    100080: r_ankle
+    100082: r_arm_elbow
+    100084: r_arm_elbow2
+    100086: r_arm_shoulder
+    100088: r_arm_shoulder2
+    100090: r_arm_shoulderblade
+    100092: r_arm_wrist
+    100094: r_ball
+    100096: r_index_finger
+    100098: r_index_finger2
+    100100: r_index_finger3
+    100102: r_index_finger4
+    100104: r_knee
+    100106: r_leg
+    100108: r_middle_finger
+    100110: r_middle_finger2
+    100112: r_middle_finger3
+    100114: r_middle_finger4
+    100116: r_pinky_finger
+    100118: r_pinky_finger2
+    100120: r_pinky_finger3
+    100122: r_pinky_finger4
+    100124: r_ring_finger
+    100126: r_ring_finger2
+    100128: r_ring_finger3
+    100130: r_ring_finger4
+    100132: r_thumb
+    100134: r_thumb2
+    100136: r_thumb3
+    100138: r_toe
+    100140: scarf
+    100142: spine_bottom
+    100144: spine_bottom_mid
+    100146: spine_mid
+    100148: spine_mid_top
+    100150: spline_top
+    400000: body
+    400002: //RootNode
+    400004: core
+    400006: eyepatch
+    400008: head
+    400010: joints_and_ik
+    400012: l_ankle
+    400014: l_arm_elbow
+    400016: l_arm_elbow2
+    400018: l_arm_shoulder
+    400020: l_arm_shoulder2
+    400022: l_arm_shoulderblade
+    400024: l_arm_wrist
+    400026: l_ball
+    400028: l_index_finger
+    400030: l_index_finger2
+    400032: l_index_finger3
+    400034: l_index_finger4
+    400036: l_knee
+    400038: l_leg
+    400040: l_middle_finger
+    400042: l_middle_finger2
+    400044: l_middle_finger3
+    400046: l_middle_finger4
+    400048: l_pinky_finger
+    400050: l_pinky_finger2
+    400052: l_pinky_finger3
+    400054: l_pinky_finger4
+    400056: l_ring_finger
+    400058: l_ring_finger2
+    400060: l_ring_finger3
+    400062: l_ring_finger4
+    400064: l_thumb
+    400066: l_thumb2
+    400068: l_thumb3
+    400070: l_toe
+    400072: model
+    400074: neck
+    400076: neck2
+    400078: newroot
+    400080: r_ankle
+    400082: r_arm_elbow
+    400084: r_arm_elbow2
+    400086: r_arm_shoulder
+    400088: r_arm_shoulder2
+    400090: r_arm_shoulderblade
+    400092: r_arm_wrist
+    400094: r_ball
+    400096: r_index_finger
+    400098: r_index_finger2
+    400100: r_index_finger3
+    400102: r_index_finger4
+    400104: r_knee
+    400106: r_leg
+    400108: r_middle_finger
+    400110: r_middle_finger2
+    400112: r_middle_finger3
+    400114: r_middle_finger4
+    400116: r_pinky_finger
+    400118: r_pinky_finger2
+    400120: r_pinky_finger3
+    400122: r_pinky_finger4
+    400124: r_ring_finger
+    400126: r_ring_finger2
+    400128: r_ring_finger3
+    400130: r_ring_finger4
+    400132: r_thumb
+    400134: r_thumb2
+    400136: r_thumb3
+    400138: r_toe
+    400140: scarf
+    400142: spine_bottom
+    400144: spine_bottom_mid
+    400146: spine_mid
+    400148: spine_mid_top
+    400150: spline_top
+    4300000: scarf
+    4300002: eyepatch
+    4300004: body
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: body
+    13700002: eyepatch
+    13700004: scarf
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
