@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class MagnetRune : MonoBehaviour {
     
-    public bool collectKey = true;
+    public List<int> collectKey;
 
-
+    private void Start()
+    {
+        collectKey.Add(-1);
+    }
     // Use this for initialization
     void FixedUpdate ()
 
@@ -21,7 +24,6 @@ public class MagnetRune : MonoBehaviour {
 
         if (other.gameObject.tag == "Key")
         {
-            collectKey = true;
             print("Collected Key");
             Destroy(other.gameObject);
 

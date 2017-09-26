@@ -18,6 +18,10 @@ public class Variables
     [Range(0, 360)]
     [Tooltip("Rotation in Degrees/s")]
     public float rotateSpeed = 100f;
+
+    public Animation anim;
+    public AnimationClip runAnim;
+    public AnimationClip breathingAnim;
 }
 
 public class Player_Movement : MonoBehaviour
@@ -29,6 +33,7 @@ public class Player_Movement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Variables.anim = GetComponent<Animation>();
         Variables.player = gameObject.GetComponent<Rigidbody>();
     }
 
@@ -50,21 +55,31 @@ public class Player_Movement : MonoBehaviour
 		}
 
 		if (Input.GetKey ("right shift") || Input.GetKey ("left shift") || Input.GetKey ("joystick button 8")) {
+            Variables.player.position = (transform.position + Direction * Time.deltaTime * Variables.sprintSpeed);
 
-			Variables.player.position = (transform.position + Direction * Time.deltaTime * Variables.sprintSpeed);
-
-		} else {
-			Variables.player.position = (transform.position + Direction * Time.deltaTime * Variables.forwardSpeed);
+		}
+        else {
+            Variables.player.position = (transform.position + Direction * Time.deltaTime * Variables.forwardSpeed);
 		}
 
 		if (Input.GetAxisRaw ("Horizontal") != 0f || Input.GetAxisRaw ("Vertical") != 0f) {
-			Vector3 Movement = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0f, Input.GetAxisRaw ("Vertical"));
+            Variables.anim.clip = Variables.runAnim;
+            if (!Variables.anim.IsPlaying(Variables.runAnim.name))
+            {
+                Variables.anim.CrossFade(Variables.runAnim.name, 0.2F, PlayMode.StopAll);
+            }
+            Vector3 Movement = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0f, Input.GetAxisRaw ("Vertical"));
 			Movement = Camera.main.transform.TransformDirection (Movement);
 			Movement.y = 0f;
 			Variables.ChildModel.transform.rotation = Quaternion.LookRotation (Movement) * Quaternion.Inverse (Quaternion.Euler (0f, 0f, 0f));
 			Variables.CurrentRotation = Variables.ChildModel.transform.eulerAngles;
 		} else {
-			Variables.ChildModel.transform.eulerAngles = Variables.CurrentRotation;
+            Variables.anim.clip = Variables.breathingAnim;
+            if (!Variables.anim.IsPlaying(Variables.breathingAnim.name))
+            {
+                Variables.anim.CrossFade(Variables.breathingAnim.name, 0.2F, PlayMode.StopAll);
+            }
+            Variables.ChildModel.transform.eulerAngles = Variables.CurrentRotation;
 		}
 
 	}
