@@ -1,4 +1,16 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/GreyBox.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/Kingdom.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/GreyBox - Magnet Rune Vision Rune.unity
+=======
+- path: Assets/Scenes/MainMenu.unity
+>>>>>>> 93bda6cff40b3b84af2237b1ba432ffb8a13e995
+>>>>>>> 54ebd2f1505c890eb8b15d02e18af00435b943f8
+>>>>>>> 634b7392972580e36cf87dc52d0f98c876d1ba73
   isLoaded: 1
   isActive: 1
