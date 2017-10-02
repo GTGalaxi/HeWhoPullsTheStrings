@@ -12,10 +12,13 @@ public class DoorOpen : MonoBehaviour {
     public GameObject pivotPoint;
     public bool pressed = false;
     public bool stay = false;
+    public float doorRotation = 80;
+
 
 	// Use this for initialization
 	void Start () {
         magnetRune = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MagnetRune>();
+        to.rotation.Set(0, doorRotation, 0, 0);
 	}
     private void Update()
     {

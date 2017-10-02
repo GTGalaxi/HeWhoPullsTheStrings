@@ -45,7 +45,6 @@ public class Player_Movement : MonoBehaviour
 		Direction = Camera.main.transform.TransformDirection (Direction);
 		Direction.y = 0f;
 		Vector3 currentPos = Variables.player.transform.position;
-
 		if (Input.GetAxis ("Jump") == 1) {
 			if (Variables.grounded == true) {
 				Variables.grounded = false;
