@@ -72,7 +72,7 @@ public class CameraScript : MonoBehaviour {
             transform.position = cameraAt.transform.position;
             transform.LookAt(rotator.transform);
             transform.eulerAngles.Set(transform.rotation.x, transform.rotation.y, rotator.transform.rotation.z);
-
+            timer = 0;
         }
     }
 }
