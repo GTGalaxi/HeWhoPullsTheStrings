@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Vision.unity
+- path: Assets/Scenes/Kingdom.unity
   isLoaded: 1
   isActive: 1
