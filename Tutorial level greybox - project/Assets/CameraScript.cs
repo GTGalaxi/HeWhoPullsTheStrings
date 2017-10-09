@@ -34,7 +34,7 @@ public class CameraScript : MonoBehaviour {
         if (!scarab)
         {
             print(false);
-            rotator.transform.RotateAround(rotator.transform.position, rotator.transform.up, Speed * Input.GetAxis("Mouse X"));
+            rotator.transform.Rotate(new Vector3 (0,10,0) * Input.GetAxis("Mouse X"));
             transform.RotateAround(rotator.transform.position, rotator.transform.right, Speed * Input.GetAxis("Mouse Y"));
             float temp = Mathf.Clamp(transform.eulerAngles.x, -70, 70);
             transform.eulerAngles.Set(temp, transform.rotation.y, transform.rotation.z);
