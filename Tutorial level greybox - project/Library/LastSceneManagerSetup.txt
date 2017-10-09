@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Kingdom.unity
+- path: Assets/Scenes/Runes.unity
   isLoaded: 1
   isActive: 1

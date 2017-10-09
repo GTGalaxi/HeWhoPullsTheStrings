@@ -9,11 +9,10 @@ public class RuneInventory : MonoBehaviour {
     public GameObject[] runeButtons;
 
     public bool runeSelect = false;
-    public string currentRune = "";
+    public int hoveredRune = 0;
 
 	// Use this for initialization
 	void Start () {
-        currentRune = "vision";
 	}
 	
 	// Update is called once per frame
@@ -28,7 +27,31 @@ public class RuneInventory : MonoBehaviour {
                 }
                 runeSelect = true;
             }
-            
+
+            float selectionAngle = Mathf.Atan(Input.GetAxis("Vertical") / Input.GetAxis("Horizontal")) * Mathf.Rad2Deg;
+
+            if (selectionAngle <-67.5 || selectionAngle >= 67.5)
+            {
+                hoveredRune = 1;
+            }
+            else if (selectionAngle >= 22.5)
+            {
+                hoveredRune = 2;
+            }
+            else if (selectionAngle >= -22.5 )
+            {
+                hoveredRune = 3;
+            }
+            else if (selectionAngle >= -67.5)
+            {
+                hoveredRune = 4;
+            }
+            else
+            {
+                hoveredRune = 0;
+            }
+            print(hoveredRune);
+
         }
         else
         {
