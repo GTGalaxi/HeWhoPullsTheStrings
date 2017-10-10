@@ -17,7 +17,7 @@ public class DoorOpen : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        magnetRune = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MagnetRune>();
+        magnetRune = GameObject.FindGameObjectWithTag("Player").GetComponent<MagnetRune>();
         to.rotation.Set(0, doorRotation, 0, 0);
 	}
     private void Update()

@@ -18,6 +18,8 @@ public class AI_Possess : MonoBehaviour
 	[Tooltip("Rotation in Degrees/s")]
 	public float rotateSpeed = 100f;
 
+    public Script_AI_Test script_AI_Test;
+
     // Use this for initialization
 	void Awake()
 	{

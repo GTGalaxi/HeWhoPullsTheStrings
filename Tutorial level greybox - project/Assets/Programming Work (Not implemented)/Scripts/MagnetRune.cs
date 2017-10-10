@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MagnetRune : MonoBehaviour {
     
     public List<int> collectKey;
+    public RuneInventory runeInventory;
 
     private void Start()
     {
@@ -24,9 +25,12 @@ public class MagnetRune : MonoBehaviour {
 
         if (other.gameObject.tag == "Key")
         {
-            print("Collected Key");
-            Destroy(other.gameObject);
-
+            if (Input.GetMouseButton(0) && runeInventory.hoveredRune == 1)
+            {
+                collectKey.Add(other.gameObject.GetComponent<Key>().keyRef);
+                print("Collected Key");
+                Destroy(other.gameObject);
+            }
         }
     }
 

@@ -10,6 +10,9 @@ public class RuneInventory : MonoBehaviour {
 
     public bool runeSelect = false;
     public int hoveredRune = 0;
+    public bool inventoryOpen = false;
+    public bool pause = false;
+    public bool runeBreak = false;
 
 	// Use this for initialization
 	void Start () {
@@ -17,8 +20,10 @@ public class RuneInventory : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetAxis("RuneSelector") > 0)
+		if (Input.GetAxis("RuneSelector") > 0.1 )
         {
+            if (pause == false)
+                pause = true;
             if (runeSelect == false)
             {
                 for (int i = 0; i < runeButtons.Length; i++)
@@ -51,7 +56,19 @@ public class RuneInventory : MonoBehaviour {
                 hoveredRune = 0;
             }
             print(hoveredRune);
-
+            
+            for (int ii = 0; ii < runeButtons.Length; ii++)
+            {
+                if (ii+1 == hoveredRune)
+                {
+                    runeButtons[ii].GetComponent<RectTransform>().sizeDelta.Set(50F, 50F);
+                }
+                else
+                {
+                    runeButtons[ii].GetComponent<RectTransform>().sizeDelta.Set(40F, 40F);
+                }
+            }
+            
         }
         else
         {
@@ -63,6 +80,10 @@ public class RuneInventory : MonoBehaviour {
                 }
                 runeSelect = false;
             }
+        }
+        if (Input.GetAxis("RuneSelector") < 0.1)
+        {
+            
         }
 	}
 }
