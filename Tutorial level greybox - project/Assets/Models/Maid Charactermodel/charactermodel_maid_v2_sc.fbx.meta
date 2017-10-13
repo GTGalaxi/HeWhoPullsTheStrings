@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: 9aefddbb503c30a4883b22696b70ced3
+timeCreated: 1507869634
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bottomsplinecluster
+    100002: //RootNode
+    100004: core
+    100006: coreCON
+    100008: curve1
+    100010: joints_and_ik
+    100012: l_ankle
+    100014: l_ankleCON
+    100016: l_arm
+    100018: l_arm_ik
+    100020: l_elbow
+    100022: l_elbowPV
+    100024: l_foot
+    100026: l_hand
+    100028: l_knee
+    100030: l_kneePV
+    100032: l_leg
+    100034: l_leg_ik
+    100036: l_shoulder
+    100038: l_wrost
+    100040: l_wrostCON
+    100042: maid
+    100044: r_ankle
+    100046: r_ankleCON
+    100048: r_arm
+    100050: r_arm_ik
+    100052: r_elbow
+    100054: r_elbowPV
+    100056: r_foot
+    100058: r_hand
+    100060: r_knee
+    100062: r_kneePV
+    100064: r_leg
+    100066: r_leg_ik
+    100068: r_shoulder
+    100070: r_wrost
+    100072: r_wrostCON
+    100074: spine1
+    100076: spine2
+    100078: spine2CON
+    100080: spine3
+    100082: spine4
+    100084: spine4CON
+    100086: spine5
+    100088: spine6
+    100090: spine7
+    100092: spine7CON
+    100094: spine8
+    100096: spline
+    100098: splineik
+    100100: supermover
+    100102: topsplinecluster
+    400000: bottomsplinecluster
+    400002: //RootNode
+    400004: core
+    400006: coreCON
+    400008: curve1
+    400010: joints_and_ik
+    400012: l_ankle
+    400014: l_ankleCON
+    400016: l_arm
+    400018: l_arm_ik
+    400020: l_elbow
+    400022: l_elbowPV
+    400024: l_foot
+    400026: l_hand
+    400028: l_knee
+    400030: l_kneePV
+    400032: l_leg
+    400034: l_leg_ik
+    400036: l_shoulder
+    400038: l_wrost
+    400040: l_wrostCON
+    400042: maid
+    400044: r_ankle
+    400046: r_ankleCON
+    400048: r_arm
+    400050: r_arm_ik
+    400052: r_elbow
+    400054: r_elbowPV
+    400056: r_foot
+    400058: r_hand
+    400060: r_knee
+    400062: r_kneePV
+    400064: r_leg
+    400066: r_leg_ik
+    400068: r_shoulder
+    400070: r_wrost
+    400072: r_wrostCON
+    400074: spine1
+    400076: spine2
+    400078: spine2CON
+    400080: spine3
+    400082: spine4
+    400084: spine4CON
+    400086: spine5
+    400088: spine6
+    400090: spine7
+    400092: spine7CON
+    400094: spine8
+    400096: spline
+    400098: splineik
+    400100: supermover
+    400102: topsplinecluster
+    4300000: maid
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: maid
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

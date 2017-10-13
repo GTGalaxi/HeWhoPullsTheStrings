@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: d0b3ea62c9201b94e94038d899bcb631
+timeCreated: 1507869523
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: body
+    100002: //RootNode
+    100004: charamodel_maid_v8_sc:bottomsplinecluster
+    100006: charamodel_maid_v8_sc:core
+    100008: charamodel_maid_v8_sc:coreCON
+    100010: charamodel_maid_v8_sc:curve1
+    100012: charamodel_maid_v8_sc:l_ankle
+    100014: charamodel_maid_v8_sc:l_ankleCON
+    100016: charamodel_maid_v8_sc:l_arm
+    100018: charamodel_maid_v8_sc:l_arm_ik
+    100020: charamodel_maid_v8_sc:l_elbow
+    100022: charamodel_maid_v8_sc:l_elbowPV
+    100024: charamodel_maid_v8_sc:l_foot
+    100026: charamodel_maid_v8_sc:l_hand
+    100028: charamodel_maid_v8_sc:l_knee
+    100030: charamodel_maid_v8_sc:l_kneePV
+    100032: charamodel_maid_v8_sc:l_leg
+    100034: charamodel_maid_v8_sc:l_leg_ik
+    100036: charamodel_maid_v8_sc:l_shoulder
+    100038: charamodel_maid_v8_sc:l_wrost
+    100040: charamodel_maid_v8_sc:l_wrostCON
+    100042: charamodel_maid_v8_sc:r_ankle
+    100044: charamodel_maid_v8_sc:r_ankleCON
+    100046: charamodel_maid_v8_sc:r_arm
+    100048: charamodel_maid_v8_sc:r_arm_ik
+    100050: charamodel_maid_v8_sc:r_elbow
+    100052: charamodel_maid_v8_sc:r_elbowPV
+    100054: charamodel_maid_v8_sc:r_foot
+    100056: charamodel_maid_v8_sc:r_hand
+    100058: charamodel_maid_v8_sc:r_knee
+    100060: charamodel_maid_v8_sc:r_kneePV
+    100062: charamodel_maid_v8_sc:r_leg
+    100064: charamodel_maid_v8_sc:r_leg_ik
+    100066: charamodel_maid_v8_sc:r_shoulder
+    100068: charamodel_maid_v8_sc:r_wrost
+    100070: charamodel_maid_v8_sc:r_wrostCON
+    100072: charamodel_maid_v8_sc:spine1
+    100074: charamodel_maid_v8_sc:spine2
+    100076: charamodel_maid_v8_sc:spine2CON
+    100078: charamodel_maid_v8_sc:spine3
+    100080: charamodel_maid_v8_sc:spine4
+    100082: charamodel_maid_v8_sc:spine4CON
+    100084: charamodel_maid_v8_sc:spine5
+    100086: charamodel_maid_v8_sc:spine6
+    100088: charamodel_maid_v8_sc:spine7
+    100090: charamodel_maid_v8_sc:spine7CON
+    100092: charamodel_maid_v8_sc:spine8
+    100094: charamodel_maid_v8_sc:spline
+    100096: charamodel_maid_v8_sc:splineik
+    100098: charamodel_maid_v8_sc:topsplinecluster
+    100100: joints_and_ik
+    100102: model
+    100104: supermover
+    400000: body
+    400002: //RootNode
+    400004: charamodel_maid_v8_sc:bottomsplinecluster
+    400006: charamodel_maid_v8_sc:core
+    400008: charamodel_maid_v8_sc:coreCON
+    400010: charamodel_maid_v8_sc:curve1
+    400012: charamodel_maid_v8_sc:l_ankle
+    400014: charamodel_maid_v8_sc:l_ankleCON
+    400016: charamodel_maid_v8_sc:l_arm
+    400018: charamodel_maid_v8_sc:l_arm_ik
+    400020: charamodel_maid_v8_sc:l_elbow
+    400022: charamodel_maid_v8_sc:l_elbowPV
+    400024: charamodel_maid_v8_sc:l_foot
+    400026: charamodel_maid_v8_sc:l_hand
+    400028: charamodel_maid_v8_sc:l_knee
+    400030: charamodel_maid_v8_sc:l_kneePV
+    400032: charamodel_maid_v8_sc:l_leg
+    400034: charamodel_maid_v8_sc:l_leg_ik
+    400036: charamodel_maid_v8_sc:l_shoulder
+    400038: charamodel_maid_v8_sc:l_wrost
+    400040: charamodel_maid_v8_sc:l_wrostCON
+    400042: charamodel_maid_v8_sc:r_ankle
+    400044: charamodel_maid_v8_sc:r_ankleCON
+    400046: charamodel_maid_v8_sc:r_arm
+    400048: charamodel_maid_v8_sc:r_arm_ik
+    400050: charamodel_maid_v8_sc:r_elbow
+    400052: charamodel_maid_v8_sc:r_elbowPV
+    400054: charamodel_maid_v8_sc:r_foot
+    400056: charamodel_maid_v8_sc:r_hand
+    400058: charamodel_maid_v8_sc:r_knee
+    400060: charamodel_maid_v8_sc:r_kneePV
+    400062: charamodel_maid_v8_sc:r_leg
+    400064: charamodel_maid_v8_sc:r_leg_ik
+    400066: charamodel_maid_v8_sc:r_shoulder
+    400068: charamodel_maid_v8_sc:r_wrost
+    400070: charamodel_maid_v8_sc:r_wrostCON
+    400072: charamodel_maid_v8_sc:spine1
+    400074: charamodel_maid_v8_sc:spine2
+    400076: charamodel_maid_v8_sc:spine2CON
+    400078: charamodel_maid_v8_sc:spine3
+    400080: charamodel_maid_v8_sc:spine4
+    400082: charamodel_maid_v8_sc:spine4CON
+    400084: charamodel_maid_v8_sc:spine5
+    400086: charamodel_maid_v8_sc:spine6
+    400088: charamodel_maid_v8_sc:spine7
+    400090: charamodel_maid_v8_sc:spine7CON
+    400092: charamodel_maid_v8_sc:spine8
+    400094: charamodel_maid_v8_sc:spline
+    400096: charamodel_maid_v8_sc:splineik
+    400098: charamodel_maid_v8_sc:topsplinecluster
+    400100: joints_and_ik
+    400102: model
+    400104: supermover
+    4300000: body
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: body
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
