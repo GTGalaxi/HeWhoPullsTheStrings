@@ -3,8 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
+
+[System.Serializable]
+public class Value
+{
+    public Animation anim;
+    public AnimationClip MaidWalk;
+    public AnimationClip MaidIdle;
+}
+
+
+
+
+
+
+
+
+
+
 public class Script_General_AI : MonoBehaviour
 {
+
+
+
+
+
+    public Value Value = new Value();
+
+
 
 
     public NavMeshAgent agent;
@@ -60,6 +87,9 @@ public class Script_General_AI : MonoBehaviour
     void Start()
     {
 
+       Value.anim = GetComponent<Animation>();
+
+    
         rend = GetComponent<Renderer>();
         rend.enabled = true;
         rend.sharedMaterial = material[0];
@@ -95,7 +125,7 @@ public class Script_General_AI : MonoBehaviour
     {
 
 
-
+        agent = GetComponent<NavMeshAgent>();
 
 
     }
@@ -148,7 +178,11 @@ public class Script_General_AI : MonoBehaviour
             agent.SetDestination(waypoints[waypointInd].transform.position);
 
 
-            // AI.Move(agent.desiredVelocity, false, false);
+
+            Value.anim.clip = Value.MaidWalk;
+            Value.anim.Play("MaidWalk");
+            
+                // AI.Move(agent.desiredVelocity, false, false);
         }
 
         else if (Vector3.Distance(this.transform.position, waypoints[waypointInd].transform.position) <= 2)
