@@ -180,9 +180,16 @@ public class Script_General_AI : MonoBehaviour
 
 
             Value.anim.clip = Value.MaidWalk;
-            Value.anim.Play("MaidWalk");
-            
-                // AI.Move(agent.desiredVelocity, false, false);
+
+            //  Don't use anim.Play as you can't blend anims
+            //  Also don't use the anim name as a string like "MaidWalk", use instead MaidWalk.name, will guarantee that you aren't misspelling it
+
+            //Value.anim.Play("MaidWalk");
+
+            //  Use this method
+            Value.anim.CrossFade(Value.MaidWalk.name, 0.2F, PlayMode.StopAll);
+
+            // AI.Move(agent.desiredVelocity, false, false);
         }
 
         else if (Vector3.Distance(this.transform.position, waypoints[waypointInd].transform.position) <= 2)
