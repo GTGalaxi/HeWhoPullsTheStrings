@@ -5,13 +5,13 @@ using UnityEngine.AI;
 
 
 
-[System.Serializable]
-public class Value
-{
-    public Animation anim;
-    public AnimationClip MaidWalk;
-    public AnimationClip MaidIdle;
-}
+//[System.Serializable]
+//public class Value
+//{
+//    public Animation anim;
+//    public AnimationClip MaidWalk;
+//    public AnimationClip MaidIdle;
+//}
 
 
 
@@ -29,7 +29,7 @@ public class Script_General_AI : MonoBehaviour
 
 
 
-    public Value Value = new Value();
+    //public Value Value = new Value();
 
 
 
