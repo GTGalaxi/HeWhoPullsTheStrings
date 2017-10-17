@@ -112,8 +112,13 @@ ModelImporter:
     400102: model
     400104: supermover
     4300000: body
-    7400000: Take 001
+    7400000: GeneralAnimation
+    7400002: GeneralWalk
+    7400004: GeneralInvestigate
+    7400006: GeneralIdle
+    7400008: GeneralHurt
     9500000: //RootNode
+    11100000: //RootNode
     13700000: body
   materials:
     importMaterials: 1
@@ -137,7 +142,677 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: GeneralAnimation
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 545
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joints_and_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:bottomsplinecluster
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:curve1
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg/charamodel_maid_v8_sc:l_knee
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg/charamodel_maid_v8_sc:l_knee/charamodel_maid_v8_sc:l_ankle
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg/charamodel_maid_v8_sc:l_knee/charamodel_maid_v8_sc:l_ankle/charamodel_maid_v8_sc:l_foot
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg/charamodel_maid_v8_sc:r_knee
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg/charamodel_maid_v8_sc:r_knee/charamodel_maid_v8_sc:r_ankle
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg/charamodel_maid_v8_sc:r_knee/charamodel_maid_v8_sc:r_ankle/charamodel_maid_v8_sc:r_foot
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder/charamodel_maid_v8_sc:l_elbow
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder/charamodel_maid_v8_sc:l_elbow/charamodel_maid_v8_sc:l_wrost
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder/charamodel_maid_v8_sc:l_elbow/charamodel_maid_v8_sc:l_wrost/charamodel_maid_v8_sc:l_hand
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder/charamodel_maid_v8_sc:r_elbow
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder/charamodel_maid_v8_sc:r_elbow/charamodel_maid_v8_sc:r_wrost
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder/charamodel_maid_v8_sc:r_elbow/charamodel_maid_v8_sc:r_wrost/charamodel_maid_v8_sc:r_hand
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:spine6
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:spine6/charamodel_maid_v8_sc:spine7
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:spine6/charamodel_maid_v8_sc:spine7/charamodel_maid_v8_sc:spine8
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:l_arm_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:l_leg_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:r_arm_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:r_leg_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:spline
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:splineik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:topsplinecluster
+        weight: 1
+      - path: model
+        weight: 1
+      - path: model/body
+        weight: 1
+      - path: supermover
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:l_wrostCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:l_wrostCON/charamodel_maid_v8_sc:l_elbowPV
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:r_wrostCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:r_wrostCON/charamodel_maid_v8_sc:r_elbowPV
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:spine7CON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:l_ankleCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:l_ankleCON/charamodel_maid_v8_sc:l_kneePV
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:r_ankleCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:r_ankleCON/charamodel_maid_v8_sc:r_kneePV
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GeneralWalk
+      takeName: Take 001
+      firstFrame: 117
+      lastFrame: 234
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joints_and_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:bottomsplinecluster
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:curve1
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg/charamodel_maid_v8_sc:l_knee
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg/charamodel_maid_v8_sc:l_knee/charamodel_maid_v8_sc:l_ankle
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg/charamodel_maid_v8_sc:l_knee/charamodel_maid_v8_sc:l_ankle/charamodel_maid_v8_sc:l_foot
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg/charamodel_maid_v8_sc:r_knee
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg/charamodel_maid_v8_sc:r_knee/charamodel_maid_v8_sc:r_ankle
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg/charamodel_maid_v8_sc:r_knee/charamodel_maid_v8_sc:r_ankle/charamodel_maid_v8_sc:r_foot
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder/charamodel_maid_v8_sc:l_elbow
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder/charamodel_maid_v8_sc:l_elbow/charamodel_maid_v8_sc:l_wrost
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder/charamodel_maid_v8_sc:l_elbow/charamodel_maid_v8_sc:l_wrost/charamodel_maid_v8_sc:l_hand
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder/charamodel_maid_v8_sc:r_elbow
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder/charamodel_maid_v8_sc:r_elbow/charamodel_maid_v8_sc:r_wrost
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder/charamodel_maid_v8_sc:r_elbow/charamodel_maid_v8_sc:r_wrost/charamodel_maid_v8_sc:r_hand
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:spine6
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:spine6/charamodel_maid_v8_sc:spine7
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:spine6/charamodel_maid_v8_sc:spine7/charamodel_maid_v8_sc:spine8
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:l_arm_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:l_leg_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:r_arm_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:r_leg_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:spline
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:splineik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:topsplinecluster
+        weight: 1
+      - path: model
+        weight: 1
+      - path: model/body
+        weight: 1
+      - path: supermover
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:l_wrostCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:l_wrostCON/charamodel_maid_v8_sc:l_elbowPV
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:r_wrostCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:r_wrostCON/charamodel_maid_v8_sc:r_elbowPV
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:spine7CON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:l_ankleCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:l_ankleCON/charamodel_maid_v8_sc:l_kneePV
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:r_ankleCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:r_ankleCON/charamodel_maid_v8_sc:r_kneePV
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GeneralInvestigate
+      takeName: Take 001
+      firstFrame: 125
+      lastFrame: 359
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joints_and_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:bottomsplinecluster
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:curve1
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg/charamodel_maid_v8_sc:l_knee
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg/charamodel_maid_v8_sc:l_knee/charamodel_maid_v8_sc:l_ankle
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg/charamodel_maid_v8_sc:l_knee/charamodel_maid_v8_sc:l_ankle/charamodel_maid_v8_sc:l_foot
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg/charamodel_maid_v8_sc:r_knee
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg/charamodel_maid_v8_sc:r_knee/charamodel_maid_v8_sc:r_ankle
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg/charamodel_maid_v8_sc:r_knee/charamodel_maid_v8_sc:r_ankle/charamodel_maid_v8_sc:r_foot
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder/charamodel_maid_v8_sc:l_elbow
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder/charamodel_maid_v8_sc:l_elbow/charamodel_maid_v8_sc:l_wrost
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder/charamodel_maid_v8_sc:l_elbow/charamodel_maid_v8_sc:l_wrost/charamodel_maid_v8_sc:l_hand
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder/charamodel_maid_v8_sc:r_elbow
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder/charamodel_maid_v8_sc:r_elbow/charamodel_maid_v8_sc:r_wrost
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder/charamodel_maid_v8_sc:r_elbow/charamodel_maid_v8_sc:r_wrost/charamodel_maid_v8_sc:r_hand
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:spine6
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:spine6/charamodel_maid_v8_sc:spine7
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:spine6/charamodel_maid_v8_sc:spine7/charamodel_maid_v8_sc:spine8
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:l_arm_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:l_leg_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:r_arm_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:r_leg_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:spline
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:splineik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:topsplinecluster
+        weight: 1
+      - path: model
+        weight: 1
+      - path: model/body
+        weight: 1
+      - path: supermover
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:l_wrostCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:l_wrostCON/charamodel_maid_v8_sc:l_elbowPV
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:r_wrostCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:r_wrostCON/charamodel_maid_v8_sc:r_elbowPV
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:spine7CON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:l_ankleCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:l_ankleCON/charamodel_maid_v8_sc:l_kneePV
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:r_ankleCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:r_ankleCON/charamodel_maid_v8_sc:r_kneePV
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GeneralIdle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 113
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joints_and_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:bottomsplinecluster
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:curve1
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg/charamodel_maid_v8_sc:l_knee
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg/charamodel_maid_v8_sc:l_knee/charamodel_maid_v8_sc:l_ankle
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg/charamodel_maid_v8_sc:l_knee/charamodel_maid_v8_sc:l_ankle/charamodel_maid_v8_sc:l_foot
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg/charamodel_maid_v8_sc:r_knee
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg/charamodel_maid_v8_sc:r_knee/charamodel_maid_v8_sc:r_ankle
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg/charamodel_maid_v8_sc:r_knee/charamodel_maid_v8_sc:r_ankle/charamodel_maid_v8_sc:r_foot
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder/charamodel_maid_v8_sc:l_elbow
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder/charamodel_maid_v8_sc:l_elbow/charamodel_maid_v8_sc:l_wrost
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder/charamodel_maid_v8_sc:l_elbow/charamodel_maid_v8_sc:l_wrost/charamodel_maid_v8_sc:l_hand
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder/charamodel_maid_v8_sc:r_elbow
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder/charamodel_maid_v8_sc:r_elbow/charamodel_maid_v8_sc:r_wrost
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder/charamodel_maid_v8_sc:r_elbow/charamodel_maid_v8_sc:r_wrost/charamodel_maid_v8_sc:r_hand
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:spine6
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:spine6/charamodel_maid_v8_sc:spine7
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:spine6/charamodel_maid_v8_sc:spine7/charamodel_maid_v8_sc:spine8
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:l_arm_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:l_leg_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:r_arm_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:r_leg_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:spline
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:splineik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:topsplinecluster
+        weight: 1
+      - path: model
+        weight: 1
+      - path: model/body
+        weight: 1
+      - path: supermover
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:l_wrostCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:l_wrostCON/charamodel_maid_v8_sc:l_elbowPV
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:r_wrostCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:r_wrostCON/charamodel_maid_v8_sc:r_elbowPV
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:spine7CON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:l_ankleCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:l_ankleCON/charamodel_maid_v8_sc:l_kneePV
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:r_ankleCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:r_ankleCON/charamodel_maid_v8_sc:r_kneePV
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GeneralHurt
+      takeName: Take 001
+      firstFrame: 242
+      lastFrame: 357
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joints_and_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:bottomsplinecluster
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:curve1
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg/charamodel_maid_v8_sc:l_knee
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg/charamodel_maid_v8_sc:l_knee/charamodel_maid_v8_sc:l_ankle
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:l_leg/charamodel_maid_v8_sc:l_knee/charamodel_maid_v8_sc:l_ankle/charamodel_maid_v8_sc:l_foot
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg/charamodel_maid_v8_sc:r_knee
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg/charamodel_maid_v8_sc:r_knee/charamodel_maid_v8_sc:r_ankle
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:r_leg/charamodel_maid_v8_sc:r_knee/charamodel_maid_v8_sc:r_ankle/charamodel_maid_v8_sc:r_foot
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder/charamodel_maid_v8_sc:l_elbow
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder/charamodel_maid_v8_sc:l_elbow/charamodel_maid_v8_sc:l_wrost
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:l_arm/charamodel_maid_v8_sc:l_shoulder/charamodel_maid_v8_sc:l_elbow/charamodel_maid_v8_sc:l_wrost/charamodel_maid_v8_sc:l_hand
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder/charamodel_maid_v8_sc:r_elbow
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder/charamodel_maid_v8_sc:r_elbow/charamodel_maid_v8_sc:r_wrost
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:r_arm/charamodel_maid_v8_sc:r_shoulder/charamodel_maid_v8_sc:r_elbow/charamodel_maid_v8_sc:r_wrost/charamodel_maid_v8_sc:r_hand
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:spine6
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:spine6/charamodel_maid_v8_sc:spine7
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:core/charamodel_maid_v8_sc:spine1/charamodel_maid_v8_sc:spine2/charamodel_maid_v8_sc:spine3/charamodel_maid_v8_sc:spine4/charamodel_maid_v8_sc:spine5/charamodel_maid_v8_sc:spine6/charamodel_maid_v8_sc:spine7/charamodel_maid_v8_sc:spine8
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:l_arm_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:l_leg_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:r_arm_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:r_leg_ik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:spline
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:splineik
+        weight: 1
+      - path: joints_and_ik/charamodel_maid_v8_sc:topsplinecluster
+        weight: 1
+      - path: model
+        weight: 1
+      - path: model/body
+        weight: 1
+      - path: supermover
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:l_wrostCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:l_wrostCON/charamodel_maid_v8_sc:l_elbowPV
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:r_wrostCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:r_wrostCON/charamodel_maid_v8_sc:r_elbowPV
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:coreCON/charamodel_maid_v8_sc:spine2CON/charamodel_maid_v8_sc:spine4CON/charamodel_maid_v8_sc:spine7CON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:l_ankleCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:l_ankleCON/charamodel_maid_v8_sc:l_kneePV
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:r_ankleCON
+        weight: 1
+      - path: supermover/charamodel_maid_v8_sc:r_ankleCON/charamodel_maid_v8_sc:r_kneePV
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -179,7 +854,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

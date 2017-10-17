@@ -113,7 +113,8 @@ ModelImporter:
     7400000: MaidAnimations
     7400002: MaidWalk
     7400004: MaidIdle
-    7400006: Maid Alert Idle
+    7400006: MaidHurt
+    7400008: MaidInvestigate
     9500000: //RootNode
     11100000: //RootNode
     13700000: maid
@@ -127,6 +128,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -279,7 +282,7 @@ ModelImporter:
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
-      loop: 0
+      loop: 1
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 0
@@ -535,7 +538,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Maid Alert Idle
+      name: MaidHurt
       takeName: Take 001
       firstFrame: 241
       lastFrame: 360
@@ -543,9 +546,141 @@ ModelImporter:
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
-      loop: 0
+      loop: 1
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joints_and_ik
+        weight: 1
+      - path: joints_and_ik/bottomsplinecluster
+        weight: 1
+      - path: joints_and_ik/core
+        weight: 1
+      - path: joints_and_ik/core/curve1
+        weight: 1
+      - path: joints_and_ik/core/l_leg
+        weight: 1
+      - path: joints_and_ik/core/l_leg/l_knee
+        weight: 1
+      - path: joints_and_ik/core/l_leg/l_knee/l_ankle
+        weight: 1
+      - path: joints_and_ik/core/l_leg/l_knee/l_ankle/l_foot
+        weight: 1
+      - path: joints_and_ik/core/r_leg
+        weight: 1
+      - path: joints_and_ik/core/r_leg/r_knee
+        weight: 1
+      - path: joints_and_ik/core/r_leg/r_knee/r_ankle
+        weight: 1
+      - path: joints_and_ik/core/r_leg/r_knee/r_ankle/r_foot
+        weight: 1
+      - path: joints_and_ik/core/spine1
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3/spine4
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3/spine4/spine5
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3/spine4/spine5/l_arm
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3/spine4/spine5/l_arm/l_shoulder
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3/spine4/spine5/l_arm/l_shoulder/l_elbow
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3/spine4/spine5/l_arm/l_shoulder/l_elbow/l_wrost
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3/spine4/spine5/l_arm/l_shoulder/l_elbow/l_wrost/l_hand
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3/spine4/spine5/r_arm
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3/spine4/spine5/r_arm/r_shoulder
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3/spine4/spine5/r_arm/r_shoulder/r_elbow
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3/spine4/spine5/r_arm/r_shoulder/r_elbow/r_wrost
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3/spine4/spine5/r_arm/r_shoulder/r_elbow/r_wrost/r_hand
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3/spine4/spine5/spine6
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3/spine4/spine5/spine6/spine7
+        weight: 1
+      - path: joints_and_ik/core/spine1/spine2/spine3/spine4/spine5/spine6/spine7/spine8
+        weight: 1
+      - path: joints_and_ik/l_arm_ik
+        weight: 1
+      - path: joints_and_ik/l_leg_ik
+        weight: 1
+      - path: joints_and_ik/r_arm_ik
+        weight: 1
+      - path: joints_and_ik/r_leg_ik
+        weight: 1
+      - path: joints_and_ik/spline
+        weight: 1
+      - path: joints_and_ik/splineik
+        weight: 1
+      - path: joints_and_ik/topsplinecluster
+        weight: 1
+      - path: maid
+        weight: 1
+      - path: supermover
+        weight: 1
+      - path: supermover/coreCON
+        weight: 1
+      - path: supermover/coreCON/spine2CON
+        weight: 1
+      - path: supermover/coreCON/spine2CON/spine4CON
+        weight: 1
+      - path: supermover/coreCON/spine2CON/spine4CON/l_wrostCON
+        weight: 1
+      - path: supermover/coreCON/spine2CON/spine4CON/l_wrostCON/l_elbowPV
+        weight: 1
+      - path: supermover/coreCON/spine2CON/spine4CON/r_wrostCON
+        weight: 1
+      - path: supermover/coreCON/spine2CON/spine4CON/r_wrostCON/r_elbowPV
+        weight: 1
+      - path: supermover/coreCON/spine2CON/spine4CON/spine7CON
+        weight: 1
+      - path: supermover/l_ankleCON
+        weight: 1
+      - path: supermover/l_ankleCON/l_kneePV
+        weight: 1
+      - path: supermover/r_ankleCON
+        weight: 1
+      - path: supermover/r_ankleCON/r_kneePV
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: MaidInvestigate
+      takeName: Take 001
+      firstFrame: 118
+      lastFrame: 356
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

@@ -6,11 +6,12 @@ using UnityEngine.AI;
 
 
 [System.Serializable]
-public class Value
+public class AnimationSetMaid
 {
     public Animation anim;
     public AnimationClip MaidWalk;
-    public AnimationClip MaidIdle;
+    public AnimationClip MaidInvestigate;
+    public AnimationClip MaidHurt;
 }
 
 
@@ -22,14 +23,14 @@ public class Value
 
 
 
-public class Script_General_AI : MonoBehaviour
+public class Maid_AI : MonoBehaviour
 {
 
 
 
 
 
-    public Value Value = new Value();
+    public AnimationSetMaid AnimationSetMaid = new AnimationSetMaid();
 
 
 
@@ -72,14 +73,14 @@ public class Script_General_AI : MonoBehaviour
 
 
 
-    
-    
+
+
 
     // changes behaviour of ai depending on stages
     public Material[] material;
     Renderer rend;
     // checks if player hase been seen
-    private bool Seen = false;
+    public bool Seen = false;
     private bool OutofRange = false;
     public bool HurtPlayer = false;
 
@@ -87,9 +88,9 @@ public class Script_General_AI : MonoBehaviour
     void Start()
     {
 
-       Value.anim = GetComponent<Animation>();
+        AnimationSetMaid.anim = GetComponent<Animation>();
 
-    
+
         rend = GetComponent<Renderer>();
         rend.enabled = true;
         rend.sharedMaterial = material[0];
@@ -105,7 +106,7 @@ public class Script_General_AI : MonoBehaviour
 
         //waypoints = GameObject.FindGameObjectsWithTag("Waypoints");
         waypointInd = Random.Range(0, waypoints.Length);
-        state = Script_General_AI.State.PATROL;
+        state = Maid_AI.State.PATROL;
 
         alive = true;
         // Start FSM
@@ -179,15 +180,15 @@ public class Script_General_AI : MonoBehaviour
 
 
 
-            Value.anim.clip = Value.MaidWalk;
+            AnimationSetMaid.anim.clip = AnimationSetMaid.MaidWalk;
 
             //  Don't use anim.Play as you can't blend anims
             //  Also don't use the anim name as a string like "MaidWalk", use instead MaidWalk.name, will guarantee that you aren't misspelling it
 
-            //Value.anim.Play("MaidWalk");
+            //AnimationSetMaid.anim.Play("MaidWalk");
 
             //  Use this method
-            Value.anim.CrossFade(Value.MaidWalk.name, 0.2F, PlayMode.StopAll);
+            AnimationSetMaid.anim.CrossFade(AnimationSetMaid.MaidWalk.name, 0.2F, PlayMode.StopAll);
 
             // AI.Move(agent.desiredVelocity, false, false);
         }
@@ -213,7 +214,7 @@ public class Script_General_AI : MonoBehaviour
 
     void Hurt()
     {
-        
+
 
 
         //character.Move(agent.desiredVelocity, false, false);
@@ -223,6 +224,8 @@ public class Script_General_AI : MonoBehaviour
 
         if (HurtPlayer == false)
         {
+            AnimationSetMaid.anim.clip = AnimationSetMaid.MaidHurt;
+            AnimationSetMaid.anim.CrossFade(AnimationSetMaid.MaidHurt.name, 0.2F, PlayMode.StopAll);
             timer += Time.deltaTime;
             rend.sharedMaterial = material[2];
             agent.SetDestination(this.transform.position);
@@ -233,21 +236,28 @@ public class Script_General_AI : MonoBehaviour
             LookPos.y = transform.position.y;
             transform.LookAt(LookPos);
 
-            if (timer >= hurttimer)
-            {
-                state = Script_General_AI.State.PATROL;
-                timer = 0;
-                // Destroy(target);
-            }
-        }
-        else if (HurtPlayer == true)
-        {
             if (timer >= Killingplayer)
             {
                 Destroy(target);
             }
-
+            
+            if (timer >= hurttimer)
+            {
+                state = Maid_AI.State.PATROL;
+                timer = 0;
+                // Destroy(target);
+            }
         }
+        //else if (HurtPlayer == true)
+        //{
+        //    if (timer >= Killingplayer)
+        //    {
+        //        Destroy(target);
+        //    }
+        //    AnimationSetMaid.anim.clip = AnimationSetMaid.MaidHurt;
+        //    AnimationSetMaid.anim.CrossFade(AnimationSetMaid.MaidHurt.name, 0.2F, PlayMode.StopAll);
+
+        //}
 
 
     }
@@ -264,8 +274,20 @@ public class Script_General_AI : MonoBehaviour
         Debug.Log("investigating area");
         Debug.Log(investigateWait);
 
-
-        if (Seen == true)
+        AnimationSetMaid.anim.clip = AnimationSetMaid.MaidInvestigate;
+        AnimationSetMaid.anim.CrossFade(AnimationSetMaid.MaidInvestigate.name, 0.2F, PlayMode.StopAll);
+        //investigateSpot = target.transform.position;
+       if (Seen == true)
+       {
+            rend.sharedMaterial = material[1];
+            Debug.Log("saw something");
+            agent.speed = chasespeed;
+            agent.SetDestination(target.transform.position);
+            //  agent.SetDestination(this.transform.position);
+            timer += Time.deltaTime;
+            
+        }
+        if (Seen == false)
         {
             rend.sharedMaterial = material[1];
             Debug.Log("saw something");
@@ -273,6 +295,7 @@ public class Script_General_AI : MonoBehaviour
             agent.SetDestination(target.transform.position);
             //  agent.SetDestination(this.transform.position);
             timer += Time.deltaTime;
+
         }
 
 
@@ -280,7 +303,7 @@ public class Script_General_AI : MonoBehaviour
         if (timer >= investigateWait)
         {
             Debug.Log("FUCK");
-            state = Script_General_AI.State.PATROL;
+            state = Maid_AI.State.PATROL;
             timer = 0;
         }
 
@@ -294,8 +317,9 @@ public class Script_General_AI : MonoBehaviour
     {
         if (coll.tag == "Player")
         {
-            state = Script_General_AI.State.INVESTIGATE;
+            state = Maid_AI.State.INVESTIGATE;
             investigateSpot = coll.gameObject.transform.position;
+            
         }
 
     }
@@ -318,56 +342,63 @@ public class Script_General_AI : MonoBehaviour
 
         if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, transform.forward, out hit, CannotSee))
         {
-
+            
 
             if (hit.collider.gameObject.tag == "Player")
             {
-                state = Script_General_AI.State.INVESTIGATE;
+                Debug.Log("Investigating");
+                state = Maid_AI.State.INVESTIGATE;
                 target = hit.collider.gameObject;
                 Seen = true;
             }
             else
             {
                 Debug.Log("FUCK bsdhvdshbvjkdb");
-                if (timer >= investigateWait)
-                {
-                    state = Script_General_AI.State.PATROL;
-                    timer = 0;
-                }
+                //if (timer >= investigateWait)
+                //{
+                //    state = Maid_AI.State.PATROL;
+                //    timer = 0;
+                //}
+                state = Maid_AI.State.INVESTIGATE;
+                Seen = false;
             }
         }
         if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, (transform.forward + transform.right).normalized, out hit, CannotSee))
         {
             if (hit.collider.gameObject.tag == "Player")
             {
-                state = Script_General_AI.State.INVESTIGATE;
+                state = Maid_AI.State.INVESTIGATE;
                 target = hit.collider.gameObject;
                 Seen = true;
             }
             else
             {
-                if (timer >= investigateWait)
-                {
-                    state = Script_General_AI.State.PATROL;
-                    timer = 0;
-                }
+                //if (timer >= investigateWait)
+                //{
+                //    state = Maid_AI.State.PATROL;
+                //    timer = 0;
+                //}
+                Seen = false;
+                state = Maid_AI.State.INVESTIGATE;
             }
         }
         if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, (transform.forward - transform.right).normalized, out hit, CannotSee))
         {
             if (hit.collider.gameObject.tag == "Player")
             {
-                state = Script_General_AI.State.INVESTIGATE;
+                state = Maid_AI.State.INVESTIGATE;
                 target = hit.collider.gameObject;
                 Seen = true;
             }
             else
             {
-                if (timer >= investigateWait)
-                {
-                    state = Script_General_AI.State.PATROL;
-                    timer = 0;
-                }
+                //if (timer >= investigateWait)
+                //{
+                //    state = Maid_AI.State.PATROL;
+                //    timer = 0;
+                //}
+                state = Maid_AI.State.INVESTIGATE;
+                Seen = false;
             }
         }
 
@@ -377,7 +408,7 @@ public class Script_General_AI : MonoBehaviour
         {
             if (hit.collider.gameObject.tag == "Player")
             {
-                state = Script_General_AI.State.HURT;
+                state = Maid_AI.State.HURT;
                 target = hit.collider.gameObject;
                 HurtPlayer = true;
             }
@@ -387,13 +418,13 @@ public class Script_General_AI : MonoBehaviour
                 HurtPlayer = false;
 
 
-                state = Script_General_AI.State.HURT;
+                state = Maid_AI.State.HURT;
             }
             if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, (transform.forward + transform.right).normalized, out hit, CanSee))
             {
                 if (hit.collider.gameObject.tag == "Player")
                 {
-                    state = Script_General_AI.State.HURT;
+                    state = Maid_AI.State.HURT;
                     target = hit.collider.gameObject;
                     HurtPlayer = true;
                 }
@@ -402,7 +433,7 @@ public class Script_General_AI : MonoBehaviour
                     HurtPlayer = false;
 
 
-                    state = Script_General_AI.State.HURT;
+                    state = Maid_AI.State.HURT;
 
 
 
@@ -412,7 +443,7 @@ public class Script_General_AI : MonoBehaviour
             {
                 if (hit.collider.gameObject.tag == "Player")
                 {
-                    state = Script_General_AI.State.HURT;
+                    state = Maid_AI.State.HURT;
                     target = hit.collider.gameObject;
                     HurtPlayer = true;
                 }
@@ -421,7 +452,7 @@ public class Script_General_AI : MonoBehaviour
                     HurtPlayer = false;
 
 
-                    state = Script_General_AI.State.HURT;
+                    state = Maid_AI.State.HURT;
 
 
 
@@ -439,7 +470,6 @@ public class Script_General_AI : MonoBehaviour
 
     }
 }
-
 
 
 

@@ -68,7 +68,7 @@ public class ImmRune : MonoBehaviour {
 
 
 
-            Ai.GetComponent<Script_General_AI>().enabled = false;
+            Ai.GetComponent<Maid_AI>().enabled = false;
             Ai.GetComponent<NavMeshAgent>().enabled = false;
 
             timer = runeCooldown;
@@ -79,7 +79,7 @@ public class ImmRune : MonoBehaviour {
         {
             runeDuration = 10;
             
-            Ai.GetComponent<Script_General_AI>().enabled = true;
+            Ai.GetComponent<Maid_AI>().enabled = true;
             Ai.GetComponent<NavMeshAgent>().enabled = true;
 
         }
