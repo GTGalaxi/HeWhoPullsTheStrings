@@ -52,7 +52,7 @@ public class Maid_AI : MonoBehaviour
 
     //Variable for patrolling
     public GameObject[] waypoints;
-    private int waypointInd;
+    private int waypointInd = 0;
     public float patrolSpeed = 0.5f;
     // public float rotSpeed = 0.2f;
     public float chasespeed = 1f;
@@ -105,7 +105,7 @@ public class Maid_AI : MonoBehaviour
         agent.updateRotation = true;
 
         //waypoints = GameObject.FindGameObjectsWithTag("Waypoints");
-        waypointInd = Random.Range(0, waypoints.Length);
+        //waypointInd = Random.Range(0, waypoints.Length);
         state = Maid_AI.State.PATROL;
 
         alive = true;
@@ -170,12 +170,26 @@ public class Maid_AI : MonoBehaviour
         agent.speed = patrolSpeed;
 
 
-        if (Vector3.Distance(this.transform.position, waypoints[waypointInd].transform.position) >= 2)
+
+        //Vector3 direction = transform.position - this.transform.position;
+        //direction.y = 0;
+
+
+
+        if (Vector3.Distance(this.transform.position, waypoints[waypointInd].transform.position) > 5)
         {
             //Vector3 LookPos = waypoints[waypointInd].transform.position;
             //LookPos.y = transform.position.y;
             //transform.LookAt(LookPos);
             // transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(LookPos), rotSpeed * Time.deltaTime);
+
+
+            //waypointInd++;
+            //if (waypointInd >= waypoints.Length)
+            //{
+            //    waypointInd = 0;
+
+            //}
             agent.SetDestination(waypoints[waypointInd].transform.position);
 
 
@@ -192,14 +206,26 @@ public class Maid_AI : MonoBehaviour
 
             // AI.Move(agent.desiredVelocity, false, false);
         }
-
         else if (Vector3.Distance(this.transform.position, waypoints[waypointInd].transform.position) <= 2)
         {
-            waypointInd = Random.Range(0, waypoints.Length);
+            waypointInd++;
+            if (waypointInd >= waypoints.Length)
+            {
+                waypointInd = 0;
+
+            }
         }
+
+
+        // direction = waypoints[waypointInd].transform.position - transform.position;
+
+        //else if (Vector3.Distance(this.transform.position, waypoints[waypointInd].transform.position) <= 2)
+        //{
+        //    waypointInd = Random.Range(0, waypoints.Length);
+        //}
         else
         {
-            //AI.Move(Vector3.zero, false, false);
+            //    AI.Move(Vector3.zero, false, false);
         }
         Debug.Log("going to checkpoint");
 
