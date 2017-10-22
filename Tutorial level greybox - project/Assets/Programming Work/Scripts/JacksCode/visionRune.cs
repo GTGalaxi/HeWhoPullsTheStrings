@@ -9,10 +9,11 @@ public class visionRune : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-		
+
+        seeRunes = false
 
 
-	}
+    }
 
     // Update is called once per frame
     void Update()
