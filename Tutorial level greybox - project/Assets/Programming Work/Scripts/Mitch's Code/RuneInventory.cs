@@ -70,6 +70,56 @@ public class RuneInventory : MonoBehaviour {
             }
             
         }
+
+        else if(Input.GetKey("1"))
+        {
+            for (int i = 0; i < runeButtons.Length; i++)
+            {
+                if (i == 0)
+                    runeButtons[i].SetActive(true);
+                else
+                    runeButtons[i].SetActive(false);
+            }
+            hoveredRune = 1;
+            runeSelect = true;
+        }
+        else if (Input.GetKey("2"))
+        {
+            for (int i = 0; i < runeButtons.Length; i++)
+            {
+                if (i == 1)
+                    runeButtons[i].SetActive(true);
+                else
+                    runeButtons[i].SetActive(false);
+            }
+            hoveredRune = 2;
+            runeSelect = true;
+        }
+        else if (Input.GetKey("3"))
+        {
+            for (int i = 0; i < runeButtons.Length; i++)
+            {
+                if (i == 2)
+                    runeButtons[i].SetActive(true);
+                else
+                    runeButtons[i].SetActive(false);
+            }
+            hoveredRune = 3;
+            runeSelect = true;
+        }
+        else if (Input.GetKey("4"))
+        {
+            for (int i = 0; i < runeButtons.Length; i++)
+            {
+                if (i == 3)
+                    runeButtons[i].SetActive(true);
+                else
+                    runeButtons[i].SetActive(false);
+            }
+            hoveredRune = 4;
+            runeSelect = true;
+        }
+
         else
         {
             if (runeSelect == true)
@@ -81,9 +131,7 @@ public class RuneInventory : MonoBehaviour {
                 runeSelect = false;
             }
         }
-        if (Input.GetAxis("RuneSelector") < 0.1)
-        {
-            
-        }
+
+        
 	}
 }
