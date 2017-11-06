@@ -23,6 +23,7 @@ public class ImmRune : MonoBehaviour {
         Ai = GameObject.FindGameObjectWithTag("AI");
         //Ai.SetActive(true);
 
+
     }
 	
 	// Update is called once per frame
@@ -30,8 +31,8 @@ public class ImmRune : MonoBehaviour {
     {
 
 
-
         
+
 
 
         //adds a five sec puffer to button press
@@ -56,16 +57,17 @@ public class ImmRune : MonoBehaviour {
 
         runeDuration -= 1 * Time.deltaTime;
 
+        GameObject hitBox = GameObject.Find("Hitbox");
+        MagnetCollision hitBoxScript = hitBox.GetComponent<MagnetCollision>();
 
+        if (hitBoxScript.HitTarget == true)
+        {
 
+        print("Imm rune");
         if (Input.GetKeyDown(KeyCode.E) && runeDuration >= 0.0f)
         {
 
             print("E has been pressed");
-
-            
-
-
 
 
             Ai.GetComponent<Maid_AI>().enabled = false;
@@ -83,7 +85,7 @@ public class ImmRune : MonoBehaviour {
             Ai.GetComponent<NavMeshAgent>().enabled = true;
 
         }
-     
+        }
     }
 
 
