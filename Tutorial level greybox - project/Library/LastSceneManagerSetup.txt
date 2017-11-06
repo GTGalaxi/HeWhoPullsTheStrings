@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/MainMenu.unity
-=======
-- path: Assets/Scenes/Kingdom.unity
->>>>>>> 7b77e278b4a64ce35497f425496083cb125fbcfd
+- path: Assets/Scenes/GardenLevel.unity
   isLoaded: 1
   isActive: 1

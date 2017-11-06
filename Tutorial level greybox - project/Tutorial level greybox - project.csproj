@@ -84,6 +84,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Programming Work\Scripts\JacksCode\Collectingrune.cs" />
     <Compile Include="Assets\Programming Work\Scripts\JacksCode\DoorOpen.cs" />
     <Compile Include="Assets\Programming Work\Scripts\JacksCode\Key.cs" />
     <Compile Include="Assets\Programming Work\Scripts\JacksCode\KeyScript.cs" />
