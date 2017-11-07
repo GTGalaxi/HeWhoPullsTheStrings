@@ -6,6 +6,7 @@ public class MagnetCollision : MonoBehaviour {
 
     public bool HitTarget = false;
     public GameObject keyCollected;
+    public GameObject AIHit;
 
     // Use this for initialization
     void Start () {
@@ -24,9 +25,9 @@ public class MagnetCollision : MonoBehaviour {
     {
 
 
-        if (other.gameObject.tag == "Target")
+        if (other.gameObject.tag == "AI")
         {
-
+            AIHit = other.gameObject;
             HitTarget = true;
 
 
@@ -37,9 +38,9 @@ public class MagnetCollision : MonoBehaviour {
     {
 
 
-        if (other.gameObject.tag == "Target")
+        if (other.gameObject.tag == "AI")
         {
-
+            AIHit = null;
             HitTarget = false;
 
         }

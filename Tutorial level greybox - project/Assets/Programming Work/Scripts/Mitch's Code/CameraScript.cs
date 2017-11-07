@@ -33,16 +33,15 @@ public class CameraScript : MonoBehaviour {
 
         if (!scarab)
         {
-            print(false);
+            //print(false);
             rotator.transform.Rotate(new Vector3 (0,10,0) * Input.GetAxis("Mouse X"));
             transform.RotateAround(rotator.transform.position, rotator.transform.right, Speed * Input.GetAxis("Mouse Y"));
             float temp = Mathf.Clamp(transform.eulerAngles.x, -70, 70);
             transform.eulerAngles.Set(temp, transform.rotation.y, transform.rotation.z);
-            print(Mathf.Clamp(transform.eulerAngles.x, -70F, 70F));
         }
         else
         {
-            print(true);
+            //print(true);
             ScarabVision();
             transform.Rotate(new Vector3(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0));
             transform.eulerAngles.Set(transform.rotation.x, transform.rotation.y, rotator.transform.rotation.z);

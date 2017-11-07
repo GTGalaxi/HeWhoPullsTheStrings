@@ -70,7 +70,7 @@ public class Maid_AI : MonoBehaviour
     private float timer = 0;
     public float investigateWait = 10;
     public float Killingplayer = 3;
-
+    public bool reverse = false;
 
 
 
@@ -166,7 +166,7 @@ public class Maid_AI : MonoBehaviour
 
         rend.sharedMaterial = material[0];
 
-        Debug.Log("going to checkpoint");
+        //Debug.Log("going to checkpoint");
         agent.speed = patrolSpeed;
 
 
@@ -208,11 +208,21 @@ public class Maid_AI : MonoBehaviour
         }
         else if (Vector3.Distance(this.transform.position, waypoints[waypointInd].transform.position) <= 2)
         {
-            waypointInd++;
-            if (waypointInd >= waypoints.Length)
+            if (reverse == false)
             {
-                waypointInd = 0;
-
+                waypointInd++;
+                if (waypointInd >= waypoints.Length)
+                {
+                    reverse = true;
+                }
+            }
+            if (reverse == true)
+            {
+                waypointInd--;
+                if (waypointInd == 0)
+                {
+                    reverse = false;
+                }
             }
         }
 
@@ -227,7 +237,7 @@ public class Maid_AI : MonoBehaviour
         {
             //    AI.Move(Vector3.zero, false, false);
         }
-        Debug.Log("going to checkpoint");
+        //Debug.Log("going to checkpoint");
 
 
         //AI.rotation = Quaternion.Slerp(AI.rotation, Quaternion.LookRotation(target.position + AI.position), rotSpeed * Time.deltaTime);
@@ -256,8 +266,8 @@ public class Maid_AI : MonoBehaviour
             rend.sharedMaterial = material[2];
             agent.SetDestination(this.transform.position);
             //character.Move(Vector3.zero, false, false);
-            Debug.Log("Hurting plYER");
-            Debug.Log(hurttimer);
+            //Debug.Log("Hurting plYER");
+            //Debug.Log(hurttimer);
             Vector3 LookPos = target.transform.position;
             LookPos.y = transform.position.y;
             transform.LookAt(LookPos);
@@ -296,9 +306,9 @@ public class Maid_AI : MonoBehaviour
         //if (Workfunct == false)
         // return;
 
-
-        Debug.Log("investigating area");
-        Debug.Log(investigateWait);
+        Debug.Log(timer);
+        //Debug.Log("investigating area");
+        //Debug.Log(investigateWait);
 
         AnimationSetMaid.anim.clip = AnimationSetMaid.MaidInvestigate;
         AnimationSetMaid.anim.CrossFade(AnimationSetMaid.MaidInvestigate.name, 0.2F, PlayMode.StopAll);
@@ -306,20 +316,20 @@ public class Maid_AI : MonoBehaviour
        if (Seen == true)
        {
             rend.sharedMaterial = material[1];
-            Debug.Log("saw something");
+            //Debug.Log("saw something");
             agent.speed = chasespeed;
             agent.SetDestination(target.transform.position);
             //  agent.SetDestination(this.transform.position);
-            timer += Time.deltaTime;
+            timer = 0;
             
         }
         if (Seen == false)
         {
-            rend.sharedMaterial = material[1];
-            Debug.Log("saw something");
+            rend.sharedMaterial = material[0];
+            //Debug.Log("saw nothing");
             agent.speed = chasespeed;
-            agent.SetDestination(target.transform.position);
-            //  agent.SetDestination(this.transform.position);
+            //agent.SetDestination(target.transform.position);
+            agent.SetDestination(this.transform.position);
             timer += Time.deltaTime;
 
         }
@@ -328,7 +338,7 @@ public class Maid_AI : MonoBehaviour
 
         if (timer >= investigateWait)
         {
-            Debug.Log("FUCK");
+            //Debug.Log("FUCK");
             state = Maid_AI.State.PATROL;
             timer = 0;
         }
@@ -366,131 +376,49 @@ public class Maid_AI : MonoBehaviour
 
 
 
-        if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, transform.forward, out hit, CannotSee))
+        if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, transform.forward, out hit, CannotSee) || Physics.Raycast(transform.position + Vector3.up * heightMultiplier, (transform.forward + transform.right).normalized, out hit, CannotSee) || Physics.Raycast(transform.position + Vector3.up * heightMultiplier, (transform.forward - transform.right).normalized, out hit, CannotSee))
         {
             
 
-            if (hit.collider.gameObject.tag == "Player")
+            if (hit.collider.gameObject == target)
             {
-                Debug.Log("Investigating");
+                Seen = true;
+                //Debug.Log("Investigating");
                 state = Maid_AI.State.INVESTIGATE;
                 target = hit.collider.gameObject;
-                Seen = true;
+                
             }
             else
             {
-                Debug.Log("FUCK bsdhvdshbvjkdb");
-                //if (timer >= investigateWait)
-                //{
-                //    state = Maid_AI.State.PATROL;
-                //    timer = 0;
-                //}
-                state = Maid_AI.State.INVESTIGATE;
-                Seen = false;
-            }
-        }
-        if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, (transform.forward + transform.right).normalized, out hit, CannotSee))
-        {
-            if (hit.collider.gameObject.tag == "Player")
-            {
-                state = Maid_AI.State.INVESTIGATE;
-                target = hit.collider.gameObject;
-                Seen = true;
-            }
-            else
-            {
+                //Debug.Log("FUCK bsdhvdshbvjkdb");
                 //if (timer >= investigateWait)
                 //{
                 //    state = Maid_AI.State.PATROL;
                 //    timer = 0;
                 //}
                 Seen = false;
-                state = Maid_AI.State.INVESTIGATE;
-            }
-        }
-        if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, (transform.forward - transform.right).normalized, out hit, CannotSee))
-        {
-            if (hit.collider.gameObject.tag == "Player")
-            {
-                state = Maid_AI.State.INVESTIGATE;
-                target = hit.collider.gameObject;
-                Seen = true;
-            }
-            else
-            {
-                //if (timer >= investigateWait)
-                //{
-                //    state = Maid_AI.State.PATROL;
-                //    timer = 0;
-                //}
-                state = Maid_AI.State.INVESTIGATE;
-                Seen = false;
+                state = Maid_AI.State.PATROL;
+                
             }
         }
 
-
-
-        if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, transform.forward, out hit, CanSee))
+        if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, transform.forward, out hit, CanSee) || Physics.Raycast(transform.position + Vector3.up * heightMultiplier, (transform.forward + transform.right).normalized, out hit, CanSee) || Physics.Raycast(transform.position + Vector3.up * heightMultiplier, (transform.forward - transform.right).normalized, out hit, CanSee))
         {
-            if (hit.collider.gameObject.tag == "Player")
+            if (hit.collider.gameObject == target)
             {
+                
                 state = Maid_AI.State.HURT;
+
                 target = hit.collider.gameObject;
                 HurtPlayer = true;
             }
             else
             {
-
+                
                 HurtPlayer = false;
 
-
-                state = Maid_AI.State.HURT;
+                state = Maid_AI.State.INVESTIGATE;
             }
-            if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, (transform.forward + transform.right).normalized, out hit, CanSee))
-            {
-                if (hit.collider.gameObject.tag == "Player")
-                {
-                    state = Maid_AI.State.HURT;
-                    target = hit.collider.gameObject;
-                    HurtPlayer = true;
-                }
-                else
-                {
-                    HurtPlayer = false;
-
-
-                    state = Maid_AI.State.HURT;
-
-
-
-                }
-            }
-            if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, (transform.forward - transform.right).normalized, out hit, CanSee))
-            {
-                if (hit.collider.gameObject.tag == "Player")
-                {
-                    state = Maid_AI.State.HURT;
-                    target = hit.collider.gameObject;
-                    HurtPlayer = true;
-                }
-                else
-                {
-                    HurtPlayer = false;
-
-
-                    state = Maid_AI.State.HURT;
-
-
-
-                }
-            }
-
-
-
-
-
-
-
         }
 
 
