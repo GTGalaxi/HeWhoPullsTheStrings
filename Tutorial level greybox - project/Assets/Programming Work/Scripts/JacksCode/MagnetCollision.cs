@@ -5,6 +5,7 @@ using UnityEngine;
 public class MagnetCollision : MonoBehaviour {
 
     public bool HitTarget = false;
+    public bool HitRune = false;
     public GameObject keyCollected;
     public GameObject AIHit;
 
@@ -32,6 +33,15 @@ public class MagnetCollision : MonoBehaviour {
 
 
         }
+
+        if (other.gameObject.tag == "Rune")
+        {
+
+            HitRune = true;
+
+
+        }
+
     }
 
     void OnTriggerExit(Collider other)
@@ -44,6 +54,15 @@ public class MagnetCollision : MonoBehaviour {
             HitTarget = false;
 
         }
+
+        if (other.gameObject.tag == "Rune")
+        {
+
+            HitRune = false;
+
+
+        }
+
     }
 
 }
