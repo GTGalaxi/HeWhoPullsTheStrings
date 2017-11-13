@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/GreyBox.unity
-=======
-- path: Assets/Scenes/UpperDistrict.unity
->>>>>>> fc0f103146d58548956bcb0e87a6e2360f6dbea3
+- path: Assets/Scenes/WhiteBox.unity
   isLoaded: 1
   isActive: 1
