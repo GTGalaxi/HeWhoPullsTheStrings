@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial level greybox - project.Plugins", "Tutorial level greybox - project.Plugins.csproj", "{D1BDFA20-153B-43C3-B8DD-5F943B062174}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial level greybox - project", "Tutorial level greybox - project.csproj", "{ADE1F092-97D9-85AD-DABF-ACA6FD74402F}"

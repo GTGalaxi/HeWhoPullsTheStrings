@@ -45,7 +45,7 @@ public class CameraScript : MonoBehaviour {
             ScarabVision();
             transform.Rotate(new Vector3(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0));
             transform.eulerAngles.Set(transform.rotation.x, transform.rotation.y, rotator.transform.rotation.z);
-            scarabObject.transform.position = (scarabObject.transform.position + Direction * Time.deltaTime);
+            scarabObject.transform.position = (scarabObject.transform.position + Direction * 3 * Time.deltaTime);
             transform.position = scarabObject.transform.position;
         }
 
