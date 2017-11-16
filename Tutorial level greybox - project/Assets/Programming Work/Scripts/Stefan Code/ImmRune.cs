@@ -9,85 +9,45 @@ public class ImmRune : MonoBehaviour {
 
     private GameObject Ai;
 
-   private float runeCooldown = 7f;
-    private float timer  = 7f;
+   private float runeCooldown = 17f;
+    private float timer  = 0;
     public float runeDuration = 10f;
    
 
     // Use this for initialization
     void Start ()
     {
-       
-       // character = GameObject.FindGameObjectWithTag("Player");
-      //  character.GetComponent<UnityStandardAssets.Characters.ThirdPerson.TestScriptII>().patrolSpeed();
-        Ai = GameObject.FindGameObjectWithTag("AI");
-        //Ai.SetActive(true);
-
 
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-
-
-        
-
-
-
-        //adds a five sec puffer to button press
-
-
-        KnockOutRune();
-
-        
-
-
-    }
-
-
-
-
-
-    // Press input deactivate ai script
-
-    void KnockOutRune()
-    {
-
-
-        runeDuration -= 1 * Time.deltaTime;
+        timer -= Time.deltaTime;
 
         GameObject hitBox = GameObject.Find("Hitbox");
         MagnetCollision hitBoxScript = hitBox.GetComponent<MagnetCollision>();
-
         if (hitBoxScript.HitTarget == true)
         {
-
-        print("Imm rune");
-        if (Input.GetKeyDown(KeyCode.E) && runeDuration >= 0.0f)
-        {
-
-            print("E has been pressed");
+            if (Input.GetKeyDown(KeyCode.E) && timer <= 0.0f)
+            {
+                runeDuration -= Time.deltaTime;
 
 
-            Ai.GetComponent<Maid_AI>().enabled = false;
-            Ai.GetComponent<NavMeshAgent>().enabled = false;
+                hitBoxScript.AIHit.GetComponent<Maid_AI>().enabled = false;
+                hitBoxScript.AIHit.GetComponent<NavMeshAgent>().enabled = false;
+                timer = runeCooldown;
+            }
+            if (runeDuration <= 0.0f)
+            {
+                runeDuration = 10;
 
-            timer = runeCooldown;
+                hitBoxScript.AIHit.GetComponent<Maid_AI>().enabled = true;
+                hitBoxScript.AIHit.GetComponent<NavMeshAgent>().enabled = true;
 
-        }
-        else if (timer <= 0.0f || runeDuration <= 0)
-        //if (Input.GetKeyUp(KeyCode.
-        {
-            runeDuration = 10;
-            
-            Ai.GetComponent<Maid_AI>().enabled = true;
-            Ai.GetComponent<NavMeshAgent>().enabled = true;
-
-        }
+            }
         }
     }
-
 
         
 }

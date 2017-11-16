@@ -16,7 +16,12 @@ public class RuneInventory : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	}
+        for (int i = 0; i < runeButtons.Length; i++)
+        {
+            runeButtons[i].SetActive(false);
+        }
+        runeSelect = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -56,18 +61,6 @@ public class RuneInventory : MonoBehaviour {
                 hoveredRune = 0;
             }
             print(hoveredRune);
-            
-            for (int ii = 0; ii < runeButtons.Length; ii++)
-            {
-                if (ii+1 == hoveredRune)
-                {
-                    runeButtons[ii].GetComponent<RectTransform>().sizeDelta.Set(50F, 50F);
-                }
-                else
-                {
-                    runeButtons[ii].GetComponent<RectTransform>().sizeDelta.Set(40F, 40F);
-                }
-            }
             
         }
 

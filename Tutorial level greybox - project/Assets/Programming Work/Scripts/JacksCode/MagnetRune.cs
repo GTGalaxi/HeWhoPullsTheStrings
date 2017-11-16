@@ -25,7 +25,7 @@ public class MagnetRune : MonoBehaviour {
 
         if (other.gameObject.tag == "Key")
         {
-            if (Input.GetMouseButton(0) && runeInventory.hoveredRune == 1)
+            if (Input.GetMouseButton(0) && runeInventory.hoveredRune == 2)
             {
                 collectKey.Add(other.gameObject.GetComponent<Key>().keyRef);
                 print("Collected Key");
