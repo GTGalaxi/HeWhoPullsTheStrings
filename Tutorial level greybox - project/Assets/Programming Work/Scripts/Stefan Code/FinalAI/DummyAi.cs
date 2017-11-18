@@ -81,27 +81,18 @@ public class DummyAi : MonoBehaviour {
 
         if (Seen ==false)
         { 
-            if (Vector3.Distance(waypoints[waypointInd].transform.position, transform.position) < 0)
-            {
-                waypointInd++;
-                if (waypointInd >= waypoints.Length)
-                {
-                    waypointInd = 0;
-                }
-
-            }
-            // affects how close ai goes to way point as well as reverses pathing movement.
-            else if (Vector3.Distance(waypoints[waypointInd].transform.position, transform.position) <= 2)
+            if (Vector3.Distance(waypoints[waypointInd].transform.position, transform.position) <= 2)
             {
                 if (reverse == false)
                 {
                     waypointInd++;
                     if (waypointInd >= waypoints.Length)
                     {
+                        waypointInd--;
                         reverse = true;
                     }
                 }
-                if (reverse == true)
+                else
                 {
                     waypointInd--;
                     if (waypointInd == 0)
@@ -140,10 +131,10 @@ public class DummyAi : MonoBehaviour {
             //
             //
             // this debug works
-             Debug.Log("Hello ray works");
+             //Debug.Log("Hello ray works");
 
             //this part is being ignored for reasons unknown. player character is tagged as player.
-            if (hit.collider.gameObject.tag == "player")
+            if (hit.collider.gameObject.tag == "Player")
             {
 
                 // this debug does not work.
