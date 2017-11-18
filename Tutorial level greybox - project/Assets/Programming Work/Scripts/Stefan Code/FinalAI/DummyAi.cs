@@ -55,7 +55,7 @@ public class DummyAi : MonoBehaviour {
 
 
 
-        FixedUpdate();
+        
         Patrol();
 		
 	}
@@ -123,21 +123,34 @@ public class DummyAi : MonoBehaviour {
 
 
 
-
-
-
-
-
-
+   
     void FixedUpdate()
     {
+
         RaycastHit hit;
+        
         Debug.DrawRay(transform.position + Vector3.up * heightMultiplier, transform.forward * CanSee, Color.green);
 
         if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, transform.forward, out hit, CanSee))
         {
-            if (hit.collider.gameObject.tag == "Player")
+            // not sure whats happening, ai is ignoring the hit.collider.gameobject.tag.
+            //
+            //
+            //
+            //
+            //
+            // this debug works
+             Debug.Log("Hello ray works");
+
+            //this part is being ignored for reasons unknown. player character is tagged as player.
+            if (hit.collider.gameObject.tag == "player")
             {
+
+                // this debug does not work.
+                //
+                //not sure why 
+                Debug.Log("Hit player");
+                player = hit.collider.gameObject;
                 Seen = true;
 
                 if (Seen == true)
@@ -157,20 +170,13 @@ public class DummyAi : MonoBehaviour {
                     }
                 }
 
-               
-            }
-            else
-            {
-                Seen = false;
-                HurtPlayer = false;
-
-
 
             }
+            
         }
 
 
-
+       
 
 
 
