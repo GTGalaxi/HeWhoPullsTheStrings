@@ -55,7 +55,7 @@ public class DummyAi : MonoBehaviour {
 
 
 
-        FixedUpdate();
+        
         Patrol();
 		
 	}
@@ -81,27 +81,18 @@ public class DummyAi : MonoBehaviour {
 
         if (Seen ==false)
         { 
-            if (Vector3.Distance(waypoints[waypointInd].transform.position, transform.position) < 0)
-            {
-                waypointInd++;
-                if (waypointInd >= waypoints.Length)
-                {
-                    waypointInd = 0;
-                }
-
-            }
-            // affects how close ai goes to way point as well as reverses pathing movement.
-            else if (Vector3.Distance(waypoints[waypointInd].transform.position, transform.position) <= 2)
+            if (Vector3.Distance(waypoints[waypointInd].transform.position, transform.position) <= 2)
             {
                 if (reverse == false)
                 {
                     waypointInd++;
                     if (waypointInd >= waypoints.Length)
                     {
+                        waypointInd--;
                         reverse = true;
                     }
                 }
-                if (reverse == true)
+                else
                 {
                     waypointInd--;
                     if (waypointInd == 0)
@@ -123,21 +114,34 @@ public class DummyAi : MonoBehaviour {
 
 
 
-
-
-
-
-
-
+   
     void FixedUpdate()
     {
+
         RaycastHit hit;
+        
         Debug.DrawRay(transform.position + Vector3.up * heightMultiplier, transform.forward * CanSee, Color.green);
 
         if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, transform.forward, out hit, CanSee))
         {
+            // not sure whats happening, ai is ignoring the hit.collider.gameobject.tag.
+            //
+            //
+            //
+            //
+            //
+            // this debug works
+             //Debug.Log("Hello ray works");
+
+            //this part is being ignored for reasons unknown. player character is tagged as player.
             if (hit.collider.gameObject.tag == "Player")
             {
+
+                // this debug does not work.
+                //
+                //not sure why 
+                Debug.Log("Hit player");
+                player = hit.collider.gameObject;
                 Seen = true;
 
                 if (Seen == true)
@@ -157,20 +161,13 @@ public class DummyAi : MonoBehaviour {
                     }
                 }
 
-               
-            }
-            else
-            {
-                Seen = false;
-                HurtPlayer = false;
-
-
 
             }
+            
         }
 
 
-
+       
 
 
 
