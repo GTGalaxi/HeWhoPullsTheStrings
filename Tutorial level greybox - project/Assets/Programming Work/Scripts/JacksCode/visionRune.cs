@@ -31,7 +31,11 @@ public class visionRune : MonoBehaviour {
                 seeRunes = !seeRunes;
 
             }
-                
+
+            if (runeInventory.hoveredRune != 1)
+                seeRunes = false;
+
+
         }
     }
 }

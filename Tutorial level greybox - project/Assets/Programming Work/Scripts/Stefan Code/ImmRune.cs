@@ -5,11 +5,11 @@ using UnityEngine.AI;
 
 public class ImmRune : MonoBehaviour {
 
-
+    public RuneInventory runeInventory;
 
     private GameObject Ai;
 
-   private float runeCooldown = 17f;
+    private float runeCooldown = 17f;
     private float timer  = 0;
     public float runeDuration = 10f;
    
@@ -29,7 +29,7 @@ public class ImmRune : MonoBehaviour {
         MagnetCollision hitBoxScript = hitBox.GetComponent<MagnetCollision>();
         if (hitBoxScript.HitTarget == true)
         {
-            if (Input.GetKeyDown(KeyCode.E) && timer <= 0.0f)
+            if (Input.GetMouseButtonDown(0) && timer <= 0.0f && runeInventory.hoveredRune == 4)
             {
                 runeDuration -= Time.deltaTime;
 
