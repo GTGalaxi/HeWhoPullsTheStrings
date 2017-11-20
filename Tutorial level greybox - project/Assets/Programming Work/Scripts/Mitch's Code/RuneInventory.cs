@@ -5,6 +5,7 @@ using UnityEngine;
 public class RuneInventory : MonoBehaviour {
 
     //public  runes = {};
+    [SerializeField]
     public static bool[] runesAccessable = { false , false , false , false };
     public GameObject[] runeButtons;
 
