@@ -34,8 +34,8 @@ public class ImmRune : MonoBehaviour {
                 runeDuration -= Time.deltaTime;
 
 
-                hitBoxScript.AIHit.GetComponent<Maid_AI>().enabled = false;
-                hitBoxScript.AIHit.GetComponent<NavMeshAgent>().enabled = false;
+                hitBoxScript.AIHit.GetComponent<DummyAi>().enabled = false;
+                //hitBoxScript.AIHit.GetComponent<NavMeshAgent>().enabled = false;
                 timer = runeCooldown;
             }
             if (runeDuration <= 0.0f)
