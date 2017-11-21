@@ -18,6 +18,8 @@ public class AI_Possess : MonoBehaviour
 	[Tooltip("Rotation in Degrees/s")]
 	public float rotateSpeed = 100f;
 
+    public RuneInventory runeInventory;
+
     public Script_General_AI script_AI_Test;
 
     // Use this for initialization
@@ -25,9 +27,11 @@ public class AI_Possess : MonoBehaviour
 	{
 		enabled = false;
 	}
-
-	void Start()
+    
+    // Use this for initialization
+    void Start()
     {
+        runeInventory = GameObject.Find("RuneImage").GetComponent<RuneInventory>();
         AI = gameObject.GetComponent<Rigidbody>();
 
     }
@@ -35,10 +39,7 @@ public class AI_Possess : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
 	{
-		if (Input.GetKey (KeyCode.E)) {
-			//Player.GetComponent<Player_Movement>().Variables.Possessing = false;
-			enabled = false;
-		}
+        
 
 		Vector3 Direction = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0f, Input.GetAxisRaw ("Vertical"));
 		Direction = Camera.main.transform.TransformDirection (Direction);

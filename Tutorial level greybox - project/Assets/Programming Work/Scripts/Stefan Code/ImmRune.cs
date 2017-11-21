@@ -17,7 +17,7 @@ public class ImmRune : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-
+        runeInventory = GameObject.Find("RuneImage").GetComponent<RuneInventory>();
     }
 	
 	// Update is called once per frame

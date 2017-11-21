@@ -27,11 +27,11 @@ public class Collectingrune : MonoBehaviour {
 
         if (NoOfRunes >= 0)
             RuneInventory.runesAccessable[0] = true;
-        if (NoOfRunes >= 1)
+        if (NoOfRunes >= 0)
             RuneInventory.runesAccessable[1] = true;
-        if (NoOfRunes >= 2)
+        if (NoOfRunes >= 0)
             RuneInventory.runesAccessable[2] = true;
-        if (NoOfRunes >= 3)
+        if (NoOfRunes >= 0)
             RuneInventory.runesAccessable[3] = true;
 
         if(setting == true)

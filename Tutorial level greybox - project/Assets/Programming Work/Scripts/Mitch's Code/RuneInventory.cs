@@ -61,7 +61,7 @@ public class RuneInventory : MonoBehaviour {
             {
                 hoveredRune = 0;
             }
-            print(hoveredRune);
+            
             
         }
 
@@ -137,7 +137,7 @@ public class RuneInventory : MonoBehaviour {
                 runeSelect = false;
             }
         }
+        print(hoveredRune);
 
-        
-	}
+    }
 }

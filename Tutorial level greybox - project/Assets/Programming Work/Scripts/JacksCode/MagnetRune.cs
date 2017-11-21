@@ -10,6 +10,7 @@ public class MagnetRune : MonoBehaviour {
 
     private void Start()
     {
+        runeInventory = GameObject.Find("RuneImage").GetComponent<RuneInventory>();
         collectKey.Add(-1);
     }
     // Use this for initialization
