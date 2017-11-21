@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [System.Serializable]
-public class AnimationSetMaid
+public class AnimationSet
 {
     public Animation anim;
     public AnimationClip MaidWalk;
@@ -14,7 +14,7 @@ public class AnimationSetMaid
 
 public class Maid_AI : MonoBehaviour
 {
-    public AnimationSetMaid AnimationSetMaid = new AnimationSetMaid();
+    public AnimationSet AnimationSet = new AnimationSet();
     public NavMeshAgent agent;
 
     public enum State
@@ -57,7 +57,7 @@ public class Maid_AI : MonoBehaviour
     
     void Start()
     {
-        AnimationSetMaid.anim = GetComponent<Animation>();
+        AnimationSet.anim = GetComponent<Animation>();
         
         rend = GetComponent<Renderer>();
         rend.enabled = true;
@@ -109,8 +109,8 @@ public class Maid_AI : MonoBehaviour
         if (Vector3.Distance(this.transform.position, waypoints[waypointInd].transform.position) > 5)
         {
             agent.SetDestination(waypoints[waypointInd].transform.position);
-            AnimationSetMaid.anim.clip = AnimationSetMaid.MaidWalk;
-            AnimationSetMaid.anim.CrossFade(AnimationSetMaid.MaidWalk.name, 0.2F, PlayMode.StopAll);
+            AnimationSet.anim.clip = AnimationSet.MaidWalk;
+            AnimationSet.anim.CrossFade(AnimationSet.MaidWalk.name, 0.2F, PlayMode.StopAll);
         }
         else if (Vector3.Distance(this.transform.position, waypoints[waypointInd].transform.position) <= 2)
         {
@@ -137,8 +137,8 @@ public class Maid_AI : MonoBehaviour
     {
         if (HurtPlayer == false)
         {
-            AnimationSetMaid.anim.clip = AnimationSetMaid.MaidHurt;
-            AnimationSetMaid.anim.CrossFade(AnimationSetMaid.MaidHurt.name, 0.2F, PlayMode.StopAll);
+            AnimationSet.anim.clip = AnimationSet.MaidHurt;
+            AnimationSet.anim.CrossFade(AnimationSet.MaidHurt.name, 0.2F, PlayMode.StopAll);
             timer += Time.deltaTime;
             rend.sharedMaterial = material[2];
             agent.SetDestination(this.transform.position);
@@ -166,8 +166,8 @@ public class Maid_AI : MonoBehaviour
     {
         Debug.Log(timer);
 
-        AnimationSetMaid.anim.clip = AnimationSetMaid.MaidInvestigate;
-        AnimationSetMaid.anim.CrossFade(AnimationSetMaid.MaidInvestigate.name, 0.2F, PlayMode.StopAll);
+        AnimationSet.anim.clip = AnimationSet.MaidInvestigate;
+        AnimationSet.anim.CrossFade(AnimationSet.MaidInvestigate.name, 0.2F, PlayMode.StopAll);
 
        if (Seen == true)
        {
