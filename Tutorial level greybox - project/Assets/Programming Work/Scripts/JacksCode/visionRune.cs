@@ -11,7 +11,7 @@ public class visionRune : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        
+        GameObject runeInventory = GameObject.Find("RuneImage");
         seeRunes = false;
 
     }
