@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class visionRune : MonoBehaviour {
-
+    
     public bool seeRunes = false;
+
+    public RuneInventory runeInventory;
 
     // Use this for initialization
     void Start ()
     {
-
+        runeInventory = GameObject.Find("RuneImage").GetComponent<RuneInventory>();
         seeRunes = false;
-
 
     }
 
@@ -23,19 +24,17 @@ public class visionRune : MonoBehaviour {
         GameObject[] Runes = GameObject.FindGameObjectsWithTag("Rune");
         foreach (GameObject Rune in Runes)
         {
-
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && runeInventory.hoveredRune == 1)
             {
 
-                    seeRunes = !seeRunes;
+                Debug.Log("did this");
+                seeRunes = !seeRunes;
 
             }
 
-            if (seeRunes == true)
-                Rune.GetComponent<Renderer>().material.color = new Color(0, 0, 255);
+            if (runeInventory.hoveredRune != 1)
+                seeRunes = false;
 
-            if (seeRunes == false)
-                Rune.GetComponent<Renderer>().material.color = new Color(255, 99, 216);
 
         }
     }
