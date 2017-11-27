@@ -24,6 +24,7 @@ public class Variables
     public AnimationClip crouchAnim;
     public AnimationClip crouchIdleAnim;
     public AnimationClip breathingAnim;
+
 }
 
 public class Player_Movement : MonoBehaviour
@@ -32,6 +33,8 @@ public class Player_Movement : MonoBehaviour
     public float colliderHeight;
     public bool jumpAllowed = false;
     public Variables Variables = new Variables();
+    public GameObject thingo;
+    public RuneInventory runeInventory;
 
     // Use this for initialization
     void Start()
@@ -40,6 +43,7 @@ public class Player_Movement : MonoBehaviour
         Variables.player = gameObject.GetComponent<Rigidbody>();
         colliderPos = GetComponent<CapsuleCollider>().center.y;
         colliderHeight = GetComponent<CapsuleCollider>().height;
+        runeInventory = GameObject.Find("RuneImage").GetComponent<RuneInventory>();
     }
 
     // Update is called once per frame
@@ -61,7 +65,7 @@ public class Player_Movement : MonoBehaviour
 
         }
 		Vector3 Direction = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0f, Input.GetAxisRaw ("Vertical"));
-		Direction = Camera.main.transform.TransformDirection (Direction);
+		Direction = thingo.transform.TransformDirection (Direction);
 		Direction.y = 0f;
 		Vector3 currentPos = Variables.player.transform.position;
 		if (Input.GetAxis ("Jump") == 1 && jumpAllowed == true) {
@@ -71,7 +75,7 @@ public class Player_Movement : MonoBehaviour
 
 			}
 		}
-        if (!Input.GetKey(KeyCode.Q))
+        if (!runeInventory.pause)
         {
             if (Input.GetKey("right shift") || Input.GetKey("left shift") || Input.GetKey("joystick button 10"))
             {

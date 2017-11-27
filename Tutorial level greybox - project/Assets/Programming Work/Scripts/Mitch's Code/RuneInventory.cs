@@ -40,6 +40,7 @@ public class RuneInventory : MonoBehaviour {
             }
 
             float selectionAngle = Mathf.Atan(Input.GetAxis("Vertical") / Input.GetAxis("Horizontal")) * Mathf.Rad2Deg;
+            print(selectionAngle);
 
             if (selectionAngle <-67.5 && runesAccessable[0] == true || selectionAngle >= 67.5 && runesAccessable[0] == true)
             {
@@ -65,7 +66,20 @@ public class RuneInventory : MonoBehaviour {
             
         }
 
-        else if(Input.GetKey("1"))
+        else if (Input.GetKey(KeyCode.Alpha0))
+        {
+            for (int i = 0; i < runeButtons.Length; i++)
+            {
+                if (i == 0)
+                    runeButtons[i].SetActive(true);
+                else
+                    runeButtons[i].SetActive(false);
+            }
+            hoveredRune = 0;
+            runeSelect = true;
+        }
+
+        else if(Input.GetKey(KeyCode.Alpha1))
         {
             for (int i = 0; i < runeButtons.Length; i++)
             {
@@ -80,7 +94,7 @@ public class RuneInventory : MonoBehaviour {
             }
             runeSelect = true;
         }
-        else if (Input.GetKey("2"))
+        else if (Input.GetKey(KeyCode.Alpha2))
         {
             for (int i = 0; i < runeButtons.Length; i++)
             {
@@ -95,7 +109,7 @@ public class RuneInventory : MonoBehaviour {
             }
             runeSelect = true;
         }
-        else if (Input.GetKey("3"))
+        else if (Input.GetKey(KeyCode.Alpha3))
         {
             for (int i = 0; i < runeButtons.Length; i++)
             {
@@ -110,7 +124,7 @@ public class RuneInventory : MonoBehaviour {
             }
             runeSelect = true;
         }
-        else if (Input.GetKey("4"))
+        else if (Input.GetKey(KeyCode.Alpha4))
         {
             for (int i = 0; i < runeButtons.Length; i++)
             {
@@ -136,6 +150,7 @@ public class RuneInventory : MonoBehaviour {
                 }
                 runeSelect = false;
             }
+            pause = false;
         }
         print(hoveredRune);
 

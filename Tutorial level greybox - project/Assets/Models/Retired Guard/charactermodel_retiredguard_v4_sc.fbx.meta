@@ -168,6 +168,7 @@ ModelImporter:
     7400010: CrouchDown
     7400012: CrouchIdle
     7400014: ClimbUp
+    7400016: Take 001
     9500000: //RootNode
     11100000: //RootNode
     13700000: body
@@ -1003,6 +1004,186 @@ ModelImporter:
       takeName: Take 001
       firstFrame: 455
       lastFrame: 490
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joints_and_ik
+        weight: 1
+      - path: joints_and_ik/newroot
+        weight: 1
+      - path: joints_and_ik/newroot/core
+        weight: 1
+      - path: joints_and_ik/newroot/core/l_leg
+        weight: 1
+      - path: joints_and_ik/newroot/core/l_leg/l_knee
+        weight: 1
+      - path: joints_and_ik/newroot/core/l_leg/l_knee/l_ankle
+        weight: 1
+      - path: joints_and_ik/newroot/core/l_leg/l_knee/l_ankle/l_ball
+        weight: 1
+      - path: joints_and_ik/newroot/core/l_leg/l_knee/l_ankle/l_ball/l_toe
+        weight: 1
+      - path: joints_and_ik/newroot/core/r_leg
+        weight: 1
+      - path: joints_and_ik/newroot/core/r_leg/r_knee
+        weight: 1
+      - path: joints_and_ik/newroot/core/r_leg/r_knee/r_ankle
+        weight: 1
+      - path: joints_and_ik/newroot/core/r_leg/r_knee/r_ankle/r_ball
+        weight: 1
+      - path: joints_and_ik/newroot/core/r_leg/r_knee/r_ankle/r_ball/r_toe
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_index_finger
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_index_finger/l_index_finger2
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_index_finger/l_index_finger2/l_index_finger3
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_index_finger/l_index_finger2/l_index_finger3/l_index_finger4
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_middle_finger
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_middle_finger/l_middle_finger2
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_middle_finger/l_middle_finger2/l_middle_finger3
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_middle_finger/l_middle_finger2/l_middle_finger3/l_middle_finger4
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_pinky_finger
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_pinky_finger/l_pinky_finger2
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_pinky_finger/l_pinky_finger2/l_pinky_finger3
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_pinky_finger/l_pinky_finger2/l_pinky_finger3/l_pinky_finger4
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_ring_finger
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_ring_finger/l_ring_finger2
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_ring_finger/l_ring_finger2/l_ring_finger3
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_ring_finger/l_ring_finger2/l_ring_finger3/l_ring_finger4
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_thumb
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_thumb/l_thumb2
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/l_arm_shoulderblade/l_arm_shoulder/l_arm_shoulder2/l_arm_elbow/l_arm_elbow2/l_arm_wrist/l_thumb/l_thumb2/l_thumb3
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_index_finger
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_index_finger/r_index_finger2
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_index_finger/r_index_finger2/r_index_finger3
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_index_finger/r_index_finger2/r_index_finger3/r_index_finger4
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_middle_finger
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_middle_finger/r_middle_finger2
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_middle_finger/r_middle_finger2/r_middle_finger3
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_middle_finger/r_middle_finger2/r_middle_finger3/r_middle_finger4
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_pinky_finger
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_pinky_finger/r_pinky_finger2
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_pinky_finger/r_pinky_finger2/r_pinky_finger3
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_pinky_finger/r_pinky_finger2/r_pinky_finger3/r_pinky_finger4
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_ring_finger
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_ring_finger/r_ring_finger2
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_ring_finger/r_ring_finger2/r_ring_finger3
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_ring_finger/r_ring_finger2/r_ring_finger3/r_ring_finger4
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_thumb
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_thumb/r_thumb2
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/r_arm_shoulderblade/r_arm_shoulder/r_arm_shoulder2/r_arm_elbow/r_arm_elbow2/r_arm_wrist/r_thumb/r_thumb2/r_thumb3
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/spline_top
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/spline_top/neck
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/spline_top/neck/neck2
+        weight: 1
+      - path: joints_and_ik/newroot/core/spine_bottom/spine_bottom_mid/spine_mid/spine_mid_top/spline_top/neck/neck2/head
+        weight: 1
+      - path: model
+        weight: 1
+      - path: model/body
+        weight: 1
+      - path: model/eyepatch
+        weight: 1
+      - path: model/scarf
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 570
+      lastFrame: 595
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
