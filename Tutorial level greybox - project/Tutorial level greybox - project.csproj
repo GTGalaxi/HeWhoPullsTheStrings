@@ -81,12 +81,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Programming Work\Scripts\JacksCode\AIInteract.cs" />
     <Compile Include="Assets\Programming Work\Scripts\JacksCode\Collectingrune.cs" />
     <Compile Include="Assets\Programming Work\Scripts\JacksCode\DoorOpen.cs" />
     <Compile Include="Assets\Programming Work\Scripts\JacksCode\Key.cs" />
     <Compile Include="Assets\Programming Work\Scripts\JacksCode\KeyScript.cs" />
     <Compile Include="Assets\Programming Work\Scripts\JacksCode\MagnetCollision.cs" />
     <Compile Include="Assets\Programming Work\Scripts\JacksCode\MagnetRune.cs" />
+    <Compile Include="Assets\Programming Work\Scripts\JacksCode\PlankAppearing.cs" />
     <Compile Include="Assets\Programming Work\Scripts\JacksCode\Playerkey.cs" />
     <Compile Include="Assets\Programming Work\Scripts\JacksCode\Targetingsystem.cs" />
     <Compile Include="Assets\Programming Work\Scripts\JacksCode\VisionRune2.cs" />
@@ -103,6 +105,7 @@
     <Compile Include="Assets\Programming Work\Scripts\RandomScripts\NaveMesh.cs" />
     <Compile Include="Assets\Programming Work\Scripts\RandomScripts\Possession.cs" />
     <Compile Include="Assets\Programming Work\Scripts\Stefan Code\FinalAI\DummyAi.cs" />
+    <Compile Include="Assets\Programming Work\Scripts\Stefan Code\FinalAI\DummyMaidAi.cs" />
     <Compile Include="Assets\Programming Work\Scripts\Stefan Code\General_AI.cs" />
     <Compile Include="Assets\Programming Work\Scripts\Stefan Code\General_AI_Still.cs" />
     <Compile Include="Assets\Programming Work\Scripts\Stefan Code\ImmRune.cs" />
