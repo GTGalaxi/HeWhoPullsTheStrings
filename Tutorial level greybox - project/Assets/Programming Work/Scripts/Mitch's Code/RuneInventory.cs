@@ -68,6 +68,8 @@ public class RuneInventory : MonoBehaviour {
 
         else if (Input.GetKey(KeyCode.Alpha0))
         {
+            if (pause == false)
+                pause = true;
             for (int i = 0; i < runeButtons.Length; i++)
             {
                 if (i == 0)
@@ -81,6 +83,8 @@ public class RuneInventory : MonoBehaviour {
 
         else if(Input.GetKey(KeyCode.Alpha1))
         {
+            if (pause == false)
+                pause = true;
             for (int i = 0; i < runeButtons.Length; i++)
             {
                 if (i == 0)
@@ -96,6 +100,8 @@ public class RuneInventory : MonoBehaviour {
         }
         else if (Input.GetKey(KeyCode.Alpha2))
         {
+            if (pause == false)
+                pause = true;
             for (int i = 0; i < runeButtons.Length; i++)
             {
                 if (i == 1)
@@ -111,6 +117,8 @@ public class RuneInventory : MonoBehaviour {
         }
         else if (Input.GetKey(KeyCode.Alpha3))
         {
+            if (pause == false)
+                pause = true;
             for (int i = 0; i < runeButtons.Length; i++)
             {
                 if (i == 2)
@@ -126,6 +134,8 @@ public class RuneInventory : MonoBehaviour {
         }
         else if (Input.GetKey(KeyCode.Alpha4))
         {
+            if (pause == false)
+                pause = true;
             for (int i = 0; i < runeButtons.Length; i++)
             {
                 if (i == 3)
