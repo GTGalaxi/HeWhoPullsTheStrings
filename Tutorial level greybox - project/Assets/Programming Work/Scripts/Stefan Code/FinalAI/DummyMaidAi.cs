@@ -141,13 +141,11 @@ public class DummyMaidAi : MonoBehaviour {
     void FixedUpdate()
     {
 
-        RaycastHit[] hit = new RaycastHit[10];
+        RaycastHit hit;
 
         Debug.DrawRay(transform.position + Vector3.up * heightMultiplier, transform.forward * CanSee, Color.green);
-
-        for (int i = 0; i < hit.Length; i++)
-        {
-            if (Physics.Raycast(transform.position + Vector3.left * heightMultiplier, transform.forward, out hit[i], CanSee))
+        
+            if (Physics.Raycast(transform.position + Vector3.left * heightMultiplier, transform.forward, out hit, CanSee))
             {
                 // not sure whats happening, ai is ignoring the hit.collider.gameobject.tag.
                 //
@@ -159,14 +157,14 @@ public class DummyMaidAi : MonoBehaviour {
                 //Debug.Log("Hello ray works");
 
                 //this part is being ignored for reasons unknown. player character is tagged as player.
-                if (hit[i].collider.gameObject.tag == "Player")
+                if (hit.collider.gameObject.tag == "Player")
                 {
 
                     // this debug does not work.
                     //
                     //not sure why 
                     Debug.Log("Hit player");
-                    player = hit[i].collider.gameObject;
+                    player = hit.collider.gameObject;
                     Seen = true;
 
                     if (Seen == true)
@@ -191,7 +189,7 @@ public class DummyMaidAi : MonoBehaviour {
                 }
 
             }
-        }
+        
     }
 
 
