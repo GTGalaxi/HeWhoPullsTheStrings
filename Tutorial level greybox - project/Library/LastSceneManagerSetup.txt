@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/GardenLevel.unity
+- path: Assets/Scenes/MidDistrict.unity
   isLoaded: 1
   isActive: 1
