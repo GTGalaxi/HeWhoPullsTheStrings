@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/UpperDistrict.unity
+- path: Assets/Scenes/LowerDistrict.unity
   isLoaded: 1
   isActive: 1
