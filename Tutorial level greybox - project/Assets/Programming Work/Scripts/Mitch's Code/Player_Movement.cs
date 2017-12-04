@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [System.Serializable]
 public class Variables
 {
@@ -26,7 +27,6 @@ public class Variables
     public AnimationClip breathingAnim;
 
 }
-
 public class Player_Movement : MonoBehaviour
 {
     public float colliderPos;
@@ -35,6 +35,7 @@ public class Player_Movement : MonoBehaviour
     public Variables Variables = new Variables();
     public GameObject thingo;
     public RuneInventory runeInventory;
+	public Fungus.Flowchart FungusStuff;
 
     // Use this for initialization
     void Start()
@@ -75,7 +76,7 @@ public class Player_Movement : MonoBehaviour
 
 			}
 		}
-        if (!runeInventory.pause)
+		if (!runeInventory.pause && FungusStuff.GetBooleanVariable("Wait") == false)
         {
             if (Input.GetKey("right shift") || Input.GetKey("left shift") || Input.GetKey("joystick button 10"))
             {

@@ -136,61 +136,61 @@ public class DummyMaidAi : MonoBehaviour {
 
 
 
+    // this is not needed anymore 
 
+    //void FixedUpdate()
+    //{
 
-    void FixedUpdate()
-    {
+    //    RaycastHit hit;
 
-        RaycastHit hit;
-
-        Debug.DrawRay(transform.position + Vector3.up * heightMultiplier, transform.forward * CanSee, Color.green);
+    //    Debug.DrawRay(transform.position + Vector3.up * heightMultiplier, transform.forward * CanSee, Color.green);
         
-            if (Physics.Raycast(transform.position + Vector3.left * heightMultiplier, transform.forward, out hit, CanSee))
-            {
-                // not sure whats happening, ai is ignoring the hit.collider.gameobject.tag.
-                //
-                //
-                //
-                //
-                //
-                // this debug works
-                //Debug.Log("Hello ray works");
+    //        if (Physics.Raycast(transform.position + Vector3.left * heightMultiplier, transform.forward, out hit, CanSee))
+    //        {
+    //            // not sure whats happening, ai is ignoring the hit.collider.gameobject.tag.
+    //            //
+    //            //
+    //            //
+    //            //
+    //            //
+    //            // this debug works
+    //            //Debug.Log("Hello ray works");
 
-                //this part is being ignored for reasons unknown. player character is tagged as player.
-                if (hit.collider.gameObject.tag == "Player")
-                {
+    //            //this part is being ignored for reasons unknown. player character is tagged as player.
+    //            if (hit.collider.gameObject.tag == "Player")
+    //            {
 
-                    // this debug does not work.
-                    //
-                    //not sure why 
-                    Debug.Log("Hit player");
-                    player = hit.collider.gameObject;
-                    Seen = true;
+    //                // this debug does not work.
+    //                //
+    //                //not sure why 
+    //                Debug.Log("Hit player");
+    //                player = hit.collider.gameObject;
+    //                Seen = true;
 
-                    if (Seen == true)
-                    {
-                        AnimationSetMaid.anim.clip = AnimationSetMaid.MaidHurt;
-                        AnimationSetMaid.anim.CrossFade(AnimationSetMaid.MaidHurt.name, 0.2F, PlayMode.StopAll);
-                        Vector3 LookPos = target.transform.position;
-                        LookPos.y = transform.position.y;
-                        transform.LookAt(LookPos);
-                        HurtPlayer = true;
+    //                if (Seen == true)
+    //                {
+    //                    AnimationSetMaid.anim.clip = AnimationSetMaid.MaidHurt;
+    //                    AnimationSetMaid.anim.CrossFade(AnimationSetMaid.MaidHurt.name, 0.2F, PlayMode.StopAll);
+    //                    Vector3 LookPos = target.transform.position;
+    //                    LookPos.y = transform.position.y;
+    //                    transform.LookAt(LookPos);
+    //                    HurtPlayer = true;
 
-                        patrolSpeed = 0;
+    //                    patrolSpeed = 0;
 
-                        if (HurtPlayer == true)
-                        {
+    //                    if (HurtPlayer == true)
+    //                    {
 
-                            Destroy(player);
-                        }
-                    }
+    //                        Destroy(player);
+    //                    }
+    //                }
 
 
-                }
+    //            }
 
-            }
+    //        }
         
-    }
+    //}
 
 
 
