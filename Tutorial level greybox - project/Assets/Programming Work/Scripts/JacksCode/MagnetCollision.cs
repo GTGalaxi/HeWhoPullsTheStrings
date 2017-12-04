@@ -6,6 +6,7 @@ public class MagnetCollision : MonoBehaviour {
 
     public bool HitTarget = false;
     public bool HitRune = false;
+    public bool HitLastRune = false;
     public GameObject keyCollected;
     public GameObject AIHit;
 
@@ -42,6 +43,14 @@ public class MagnetCollision : MonoBehaviour {
 
         }
 
+        if (other.gameObject.tag == "LastRune")
+        {
+
+            HitLastRune = true;
+
+
+        }
+
     }
 
     void OnTriggerExit(Collider other)
@@ -59,6 +68,14 @@ public class MagnetCollision : MonoBehaviour {
         {
 
             HitRune = false;
+
+
+        }
+
+        if (other.gameObject.tag == "LastRune")
+        {
+
+            HitLastRune = false;
 
 
         }

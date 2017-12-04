@@ -35,7 +35,6 @@ public class Player_Movement : MonoBehaviour
     public Variables Variables = new Variables();
     public GameObject thingo;
     public RuneInventory runeInventory;
-	public Fungus.Flowchart FungusStuff;
 
     // Use this for initialization
     void Start()
@@ -76,7 +75,7 @@ public class Player_Movement : MonoBehaviour
 
 			}
 		}
-		if (!runeInventory.pause && FungusStuff.GetBooleanVariable("Wait") == false)
+		if (!runeInventory.pause)
         {
             if (Input.GetKey("right shift") || Input.GetKey("left shift") || Input.GetKey("joystick button 10"))
             {

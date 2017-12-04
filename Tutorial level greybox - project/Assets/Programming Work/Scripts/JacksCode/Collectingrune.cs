@@ -56,5 +56,17 @@ public class Collectingrune : MonoBehaviour {
             }
 
         }
+
+        if (hitBoxScript.HitLastRune == true)
+        {
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                setting = true;
+                Application.LoadLevel("WinState");
+            }
+
+        }
+
     }
 }
