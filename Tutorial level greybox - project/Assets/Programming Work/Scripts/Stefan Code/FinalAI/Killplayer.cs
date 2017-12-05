@@ -7,12 +7,17 @@ public class Killplayer : MonoBehaviour {
     public GameObject lossState;
     public GameObject thePlayer;
 
-    // Use this for initialization
-    void Start () {
+    private void Awake()
+    {
+
         lossState = GameObject.Find("LossState");
         GameObject lossCanvas = lossState.transform.GetChild(0).gameObject;
         lossCanvas.SetActive(false);
         thePlayer = GameObject.Find("Player_Character");
+    }
+
+    // Use this for initialization
+    void Start () {
     }
 	
 	// Update is called once per frame
