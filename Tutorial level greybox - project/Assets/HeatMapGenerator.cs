@@ -19,9 +19,10 @@ public class HeatMapGenerator : MonoBehaviour {
     public RenderTexture heatMapInput;
     public Camera heatMapCamera;
     private bool holder = false;
+    public bool heatMapUpdated = false;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         float resolution = 4 / heatMapResolution ;
         Debug.Log(resolution);
         heatMapSize.sizeX = heatMapSize.sizeX * Mathf.RoundToInt(resolution + 1);
@@ -41,28 +42,32 @@ public class HeatMapGenerator : MonoBehaviour {
 
     void UpdateHeatMap ()
     {
-        for (int i = -heatMapSize.sizeX / 2; i < heatMapSize.sizeX / 2; i++)
+        if (heatMapUpdated == false)
         {
-            for (int ii = -heatMapSize.sizeZ / 2; ii < heatMapSize.sizeZ / 2; ii++)
+            for (int i = -heatMapSize.sizeX / 2; i < heatMapSize.sizeX / 2; i++)
             {
-                print(HeatCubeArray[i + heatMapSize.sizeX / 2, ii + heatMapSize.sizeZ / 2]);
-                HeatCubeArray[i + heatMapSize.sizeX / 2, ii + heatMapSize.sizeZ / 2].GetComponent<HeatMap>().HeatMapUpdate();
+                for (int ii = -heatMapSize.sizeZ / 2; ii < heatMapSize.sizeZ / 2; ii++)
+                {
+                    print(HeatCubeArray[i + heatMapSize.sizeX / 2, ii + heatMapSize.sizeZ / 2]);
+                    HeatCubeArray[i + heatMapSize.sizeX / 2, ii + heatMapSize.sizeZ / 2].GetComponent<HeatMap>().HeatMapUpdate();
+                }
             }
+
+            heatMapCamera.aspect = 1.0f;
+            heatMapCamera.Render();
+
+            RenderTexture.active = heatMapInput;
+            Texture2D heatMapOutput = new Texture2D(2048, 2048, TextureFormat.ARGB32, false);
+
+            heatMapOutput.ReadPixels(new Rect(0, 0, 2048, 2048), 0, 0);
+            RenderTexture.active = null;
+
+            byte[] bytes;
+            bytes = heatMapOutput.EncodeToPNG();
+            System.IO.File.WriteAllBytes(Application.dataPath + "/heatMapOutput_" + SceneManager.GetActiveScene().name + ".png", bytes);
+            heatMapUpdated = true;
+
         }
-
-        heatMapCamera.aspect = 1.0f;
-        heatMapCamera.Render();
-
-        RenderTexture.active = heatMapInput;
-        Texture2D heatMapOutput = new Texture2D(2048, 2048, TextureFormat.ARGB32, false);
-
-        heatMapOutput.ReadPixels(new Rect(0, 0, 2048, 2048), 0, 0);
-        RenderTexture.active = null;
-
-        byte[] bytes;
-        bytes = heatMapOutput.EncodeToPNG();
-
-        System.IO.File.WriteAllBytes("C:/tmp/heatMapOutput_"+ SceneManager.GetActiveScene().name +".png", bytes);
 
     }
 

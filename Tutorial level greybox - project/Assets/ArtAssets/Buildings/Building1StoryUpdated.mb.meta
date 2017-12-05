@@ -3,8 +3,18 @@ guid: 52c2e3c93c3ed1e45b722a607a8d6d33
 timeCreated: 1512423534
 licenseType: Free
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName: {}
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: left
+    100004: niceshop1story
+    400000: //RootNode
+    400002: left
+    400004: niceshop1story
+    2300000: niceshop1story
+    3300000: niceshop1story
+    4300000: niceshop1story
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -27,6 +37,7 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -34,7 +45,10 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -50,6 +64,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:

@@ -40,7 +40,7 @@ public class HeatMap : MonoBehaviour {
         if (colourTime > greatestTime)
         {
             greatestTime = colourTime;
-        }
+        } 
         
         heatColour.material.color = heatGradient.Evaluate((colourTime / greatestTime) * 10);
         StartCoroutine(stall(1));
