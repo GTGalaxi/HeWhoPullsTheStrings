@@ -162,7 +162,6 @@ public class RuneInventory : MonoBehaviour {
             }
             pause = false;
         }
-        print(hoveredRune);
 
     }
 }

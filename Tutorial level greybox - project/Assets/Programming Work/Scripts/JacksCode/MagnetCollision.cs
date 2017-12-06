@@ -6,30 +6,38 @@ public class MagnetCollision : MonoBehaviour {
 
     public bool HitTarget = false;
     public bool HitRune = false;
+    public bool HitLastRune = false;
     public GameObject keyCollected;
     public GameObject AIHit;
+    public GameObject runeImage;
+    public GameObject playerHit;
+
 
     // Use this for initialization
     void Start () {
 
-        
+        runeImage = GameObject.Find("RuneImage");
+        playerHit = GameObject.Find("Player_Character");
         MagnetCollision magnetScript = keyCollected.GetComponent<MagnetCollision>();
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        RuneInventory runesInventory = runeImage.GetComponent<RuneInventory>();
+    }
 
     void OnTriggerStay(Collider other)
     {
 
 
-        if (other.gameObject.tag == "AI")
+        ImmRune immuneRune = playerHit.GetComponent<ImmRune>();
+
+        if (other.gameObject.tag == "AI" && Input.GetMouseButtonDown(0) && immuneRune.timer <=0)
         {
             AIHit = other.gameObject;
             HitTarget = true;
+
 
 
         }
@@ -42,13 +50,22 @@ public class MagnetCollision : MonoBehaviour {
 
         }
 
+        if (other.gameObject.tag == "LastRune")
+        {
+
+            HitLastRune = true;
+
+
+        }
+
     }
 
     void OnTriggerExit(Collider other)
     {
 
 
-        if (other.gameObject.tag == "AI")
+        ImmRune immuneRune = playerHit.GetComponent<ImmRune>();
+        if (other.gameObject.tag == "AI" && immuneRune.immobilised == false)
         {
             AIHit = null;
             HitTarget = false;
@@ -59,6 +76,14 @@ public class MagnetCollision : MonoBehaviour {
         {
 
             HitRune = false;
+
+
+        }
+
+        if (other.gameObject.tag == "LastRune")
+        {
+
+            HitLastRune = false;
 
 
         }

@@ -4,30 +4,34 @@ using UnityEngine;
 
 public class Killplayer : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public GameObject lossState;
+    public GameObject thePlayer;
+
+    // Use this for initialization
+    void Start () {
+        lossState = GameObject.Find("LossState");
+        GameObject lossCanvas = lossState.transform.GetChild(0).gameObject;
+        lossCanvas.SetActive(false);
+        thePlayer = GameObject.Find("Player_Character");
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+        
+
 	}
 
-
-    public GameObject player;
-
-   
     
 
-
-
-
      void OnTriggerEnter(Collider other)
-     {
+     { 
         if (other.gameObject.tag == "Player")
         {
-            Destroy(player);
+            lossState = GameObject.Find("LossState");
+            GameObject lossCanvas = lossState.transform.GetChild(0).gameObject;
+            lossCanvas.SetActive(true);
+            thePlayer.GetComponent<Player_Movement>().enabled = false;
         }
     }
 }

@@ -9,9 +9,11 @@ public class ImmRune : MonoBehaviour {
 
     private GameObject Ai;
 
-    private float runeCooldown = 17f;
-    private float timer  = 0;
-    public float runeDuration = 10f;
+    private float runeCooldown = 10f;
+    public float timer  = 10;
+    public float runeDuration = 5f;
+    public GameObject hitBox;
+    public bool immobilised = false;
    
 
     // Use this for initialization
@@ -23,30 +25,40 @@ public class ImmRune : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+
+        hitBox = GameObject.Find("Hitbox");
+        MagnetCollision hitBoxScript = hitBox.GetComponent<MagnetCollision>();
+
         timer -= Time.deltaTime;
 
-        GameObject hitBox = GameObject.Find("Hitbox");
-        MagnetCollision hitBoxScript = hitBox.GetComponent<MagnetCollision>();
-        if (hitBoxScript.HitTarget == true)
+
+
+        if (immobilised == true)
         {
-            if (Input.GetMouseButtonDown(0) && timer <= 0.0f && runeInventory.hoveredRune == 4)
-            {
-                runeDuration -= Time.deltaTime;
+            runeDuration -= Time.deltaTime;
+
+            hitBoxScript.AIHit.GetComponent<DummyMaidAi>().enabled = false;
+            timer = runeCooldown;
 
 
-                hitBoxScript.AIHit.GetComponent<DummyAi>().enabled = false;
-                //hitBoxScript.AIHit.GetComponent<NavMeshAgent>().enabled = false;
-                timer = runeCooldown;
-            }
-            if (runeDuration <= 0.0f)
-            {
-                runeDuration = 10;
 
-                hitBoxScript.AIHit.GetComponent<Maid_AI>().enabled = true;
-                hitBoxScript.AIHit.GetComponent<NavMeshAgent>().enabled = true;
-
-            }
         }
+        if (runeDuration <= 0.0f)
+        {
+            immobilised = false;
+            hitBoxScript.AIHit.GetComponent<DummyMaidAi>().enabled = true;
+            runeDuration = 5;
+            timer = 10;
+
+
+
+        }
+
+        if (Input.GetMouseButtonDown(0) && timer <= 0.0f && runeInventory.hoveredRune == 4 && hitBoxScript.HitTarget == true && immobilised == false)
+        {
+            immobilised = true;
+        }
+        
     }
 
         

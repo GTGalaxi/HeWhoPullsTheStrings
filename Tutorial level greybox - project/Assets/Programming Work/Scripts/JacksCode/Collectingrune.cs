@@ -31,7 +31,7 @@ public class Collectingrune : MonoBehaviour {
             RuneInventory.runesAccessable[1] = true;
         if (NoOfRunes >= 2)
             RuneInventory.runesAccessable[2] = true;
-        if (NoOfRunes >= 3)
+        if (NoOfRunes >= 0)
             RuneInventory.runesAccessable[3] = true;
 
         if(setting == true)
@@ -56,5 +56,17 @@ public class Collectingrune : MonoBehaviour {
             }
 
         }
+
+        if (hitBoxScript.HitLastRune == true)
+        {
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                setting = true;
+                Application.LoadLevel("WinState");
+            }
+
+        }
+
     }
 }

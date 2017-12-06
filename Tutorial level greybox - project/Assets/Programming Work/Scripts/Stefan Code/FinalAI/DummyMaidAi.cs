@@ -74,7 +74,7 @@ public class DummyMaidAi : MonoBehaviour {
 
 
 
-
+        if (waypoints.Length > 0)
         Patrol();
 
     }
