@@ -57,8 +57,6 @@ public class ImmRune : MonoBehaviour {
         if (Input.GetMouseButtonDown(0) && timer <= 0.0f && runeInventory.hoveredRune == 4 && hitBoxScript.HitTarget == true && immobilised == false)
         {
             immobilised = true;
-
-            
         }
         
     }

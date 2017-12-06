@@ -31,7 +31,9 @@ public class MagnetCollision : MonoBehaviour {
     {
 
 
-        if (other.gameObject.tag == "AI")
+        ImmRune immuneRune = playerHit.GetComponent<ImmRune>();
+
+        if (other.gameObject.tag == "AI" && Input.GetMouseButtonDown(0) && immuneRune.timer <=0)
         {
             AIHit = other.gameObject;
             HitTarget = true;
