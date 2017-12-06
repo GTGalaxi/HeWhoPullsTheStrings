@@ -641,6 +641,8 @@
     <Compile Include="Assets\Programming Work\Scripts\Stefan Code\Maid_AI_Still.cs" />
     <Compile Include="Assets\Programming Work\Scripts\Stefan Code\Scripts for testing\Script_General_AI.cs" />
     <Compile Include="Assets\Programming Work\Scripts\Stefan Code\TestAISight.cs" />
+    <Compile Include="Assets\Rotator.cs" />
+    <Compile Include="Assets\Tiler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fungus\Docs\CHANGELOG.txt" />

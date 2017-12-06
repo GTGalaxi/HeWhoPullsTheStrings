@@ -12,11 +12,14 @@ public class Key : MonoBehaviour {
     
     public int keyRef;
     public MagnetRune magnetRune;
+    public RuneInventory runeInventory;
 
     void Start()
     {
         player = GameObject.Find("Player_Character");
         magnetRune = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MagnetRune>();
+
+        runeInventory = GameObject.Find("RuneImage").GetComponent<RuneInventory>();
     }
 
     // Update is called once per frame
@@ -28,7 +31,7 @@ public class Key : MonoBehaviour {
 
         float distance = Vector3.Distance(transform.position, player.transform.position);
 
-        if (magnetScript.HitTarget == true && Input.GetMouseButton(0))
+        if (magnetScript.HitTarget == true && Input.GetMouseButton(0) && runeInventory.hoveredRune == 2)
         {
 
             activated = true;
