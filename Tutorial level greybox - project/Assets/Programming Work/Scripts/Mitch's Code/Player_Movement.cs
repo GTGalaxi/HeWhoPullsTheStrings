@@ -35,6 +35,8 @@ public class Player_Movement : MonoBehaviour
     public Variables Variables = new Variables();
     public GameObject thingo;
     public RuneInventory runeInventory;
+	public Fungus.Flowchart FungusStuff;
+	public bool FungusWait = false;
 
     // Use this for initialization
     void Start()
@@ -44,6 +46,10 @@ public class Player_Movement : MonoBehaviour
         colliderPos = GetComponent<CapsuleCollider>().center.y;
         colliderHeight = GetComponent<CapsuleCollider>().height;
         runeInventory = GameObject.Find("RuneImage").GetComponent<RuneInventory>();
+		if (FungusStuff != null) 
+		{
+			FungusWait = FungusStuff.GetBooleanVariable ("Wait");
+		}
     }
 
     // Update is called once per frame
@@ -75,7 +81,7 @@ public class Player_Movement : MonoBehaviour
 
 			}
 		}
-		if (!runeInventory.pause)
+		if (!runeInventory.pause && FungusWait == false)
         {
             if (Input.GetKey("right shift") || Input.GetKey("left shift") || Input.GetKey("joystick button 10"))
             {
