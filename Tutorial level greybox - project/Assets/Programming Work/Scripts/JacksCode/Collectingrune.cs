@@ -12,7 +12,6 @@ public class Collectingrune : MonoBehaviour {
     public GameObject LoadingScreen;
     public Player_Movement Player;
     public bool Loading = false;
-    public string NextScene;
 
     // Use this for initialization
     void Start () {
@@ -89,7 +88,10 @@ public class Collectingrune : MonoBehaviour {
         {
             LoadingScreen.SetActive(true);
             Loading = true;
-            Player.enabled = false;
+            if (Player != null)
+            {
+                Player.enabled = false;
+            }
             yield return new WaitForSeconds(1);
             if (LastLevel != true)
             {
