@@ -7,9 +7,13 @@ public class MagnetRune : MonoBehaviour {
     
     public List<int> collectKey;
     public RuneInventory runeInventory;
+    public Text collectedKey;
+    public float timer = 2;
 
     private void Start()
     {
+        collectedKey.enabled = false;
+
         runeInventory = GameObject.Find("RuneImage").GetComponent<RuneInventory>();
         collectKey.Add(-1);
     }
@@ -17,6 +21,12 @@ public class MagnetRune : MonoBehaviour {
     void FixedUpdate ()
 
     {
+        timer -= Time.deltaTime;
+
+        if(timer <= 0)
+        {
+            collectedKey.enabled = false;
+        }
 
     }
 
@@ -30,6 +40,8 @@ public class MagnetRune : MonoBehaviour {
             {
                 collectKey.Add(other.gameObject.GetComponent<Key>().keyRef);
                 print("Collected Key");
+                collectedKey.enabled = true;
+                timer = 2;
                 Destroy(other.gameObject);
             }
         }
