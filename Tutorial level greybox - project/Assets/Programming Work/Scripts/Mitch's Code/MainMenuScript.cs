@@ -16,6 +16,6 @@ public class MainMenuScript : MonoBehaviour {
 
     public void OptionsButton()
     {
-        print("THERE ARE NO OPTIONS");
+        Application.LoadLevel("Credits");
     }
 }
