@@ -5,6 +5,8 @@ using UnityEngine;
 public class MagnetCollision : MonoBehaviour {
 
     public bool HitTarget = false;
+    public bool HitTarget2 = false;
+    public float possessionTimer = 0;
     public bool HitRune = false;
     public bool HitLastRune = false;
     public GameObject keyCollected;
@@ -37,25 +39,22 @@ public class MagnetCollision : MonoBehaviour {
         {
             AIHit = other.gameObject;
             HitTarget = true;
+        }
 
-
-
+        if (other.gameObject.tag == "AI" && Input.GetMouseButtonDown(0) && possessionTimer <= 0)
+        {
+            AIHit = other.gameObject;
+            HitTarget2 = true;
         }
 
         if (other.gameObject.tag == "Rune")
         {
-
             HitRune = true;
-
-
         }
 
         if (other.gameObject.tag == "LastRune")
         {
-
             HitLastRune = true;
-
-
         }
 
     }
