@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Variables
@@ -37,10 +37,12 @@ public class Player_Movement : MonoBehaviour
     public RuneInventory runeInventory;
 	public Fungus.Flowchart FungusStuff;
 	public bool FungusWait = false;
+    public bool possessing = false;
 
     // Use this for initialization
     void Start()
     {
+        
         Variables.anim = GetComponent<Animation>();
         Variables.player = gameObject.GetComponent<Rigidbody>();
         colliderPos = GetComponent<CapsuleCollider>().center.y;
@@ -81,7 +83,7 @@ public class Player_Movement : MonoBehaviour
 
 			}
 		}
-		if (!runeInventory.pause && FungusWait == false)
+		if (!runeInventory.pause && FungusWait == false && possessing == false)
         {
             if (Input.GetKey("right shift") || Input.GetKey("left shift") || Input.GetKey("joystick button 10"))
             {

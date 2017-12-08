@@ -11,7 +11,7 @@ public class MainMenuScript : MonoBehaviour {
 
     public void StartButton ()
     {
-        Application.LoadLevel(1);
+        Application.LoadLevel(2);
 	}
 
     public void OptionsButton()
