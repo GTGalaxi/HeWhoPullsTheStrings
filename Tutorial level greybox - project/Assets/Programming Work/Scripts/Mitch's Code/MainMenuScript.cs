@@ -11,6 +11,7 @@ public class MainMenuScript : MonoBehaviour {
 
     public void StartButton ()
     {
+        Time.timeScale = 1;
         Application.LoadLevel(2);
 	}
 

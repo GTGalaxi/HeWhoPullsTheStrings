@@ -80,11 +80,9 @@ public class PauseM : MonoBehaviour {
 
     public void MainM(bool Quit)
     {
-        if (Quit)
-
-        {
+        
             SceneManager.LoadScene("MainMenu");
-        }
+      
     }
 
 

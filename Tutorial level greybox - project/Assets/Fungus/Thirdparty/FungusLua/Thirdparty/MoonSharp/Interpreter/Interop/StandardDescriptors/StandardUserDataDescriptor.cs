@@ -68,8 +68,8 @@ namespace MoonSharp.Interpreter.Interop
 				}
 
 				// valuetypes don't reflect their empty ctor.. actually empty ctors are a perversion, we don't care and implement ours
-				if (Framework.Do.IsValueType(type) && !membersToIgnore.Contains("__new"))
-					AddMember("__new", new ValueTypeDefaultCtorMemberDescriptor(type));
+				//if (Framework.Do.IsValueType(type) && !membersToIgnore.Contains("__new"))
+					//AddMember("__new", new ValueTypeDefaultCtorMemberDescriptor(type));
 			}
 
 

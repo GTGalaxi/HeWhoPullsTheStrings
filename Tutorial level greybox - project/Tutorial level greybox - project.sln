@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial level greybox - project.Plugins", "Tutorial level greybox - project.Plugins.csproj", "{D1BDFA20-153B-43C3-B8DD-5F943B062174}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial level greybox - project", "Tutorial level greybox - project.csproj", "{ADE1F092-97D9-85AD-DABF-ACA6FD74402F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial level greybox - project.Plugins", "Tutorial level greybox - project.Plugins.csproj", "{D1BDFA20-153B-43C3-B8DD-5F943B062174}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial level greybox - project.Editor.Plugins", "Tutorial level greybox - project.Editor.Plugins.csproj", "{CF8A6183-52D2-1301-717E-17FE1A14D48A}"
 EndProject
@@ -15,14 +15,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D1BDFA20-153B-43C3-B8DD-5F943B062174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D1BDFA20-153B-43C3-B8DD-5F943B062174}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1BDFA20-153B-43C3-B8DD-5F943B062174}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1BDFA20-153B-43C3-B8DD-5F943B062174}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ADE1F092-97D9-85AD-DABF-ACA6FD74402F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ADE1F092-97D9-85AD-DABF-ACA6FD74402F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADE1F092-97D9-85AD-DABF-ACA6FD74402F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADE1F092-97D9-85AD-DABF-ACA6FD74402F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1BDFA20-153B-43C3-B8DD-5F943B062174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1BDFA20-153B-43C3-B8DD-5F943B062174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1BDFA20-153B-43C3-B8DD-5F943B062174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1BDFA20-153B-43C3-B8DD-5F943B062174}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CF8A6183-52D2-1301-717E-17FE1A14D48A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CF8A6183-52D2-1301-717E-17FE1A14D48A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF8A6183-52D2-1301-717E-17FE1A14D48A}.Release|Any CPU.ActiveCfg = Release|Any CPU

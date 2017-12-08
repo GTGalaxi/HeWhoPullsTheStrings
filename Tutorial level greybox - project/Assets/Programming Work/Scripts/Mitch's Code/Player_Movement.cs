@@ -42,7 +42,7 @@ public class Player_Movement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
+        Cursor.visible = false;
         Variables.anim = GetComponent<Animation>();
         Variables.player = gameObject.GetComponent<Rigidbody>();
         colliderPos = GetComponent<CapsuleCollider>().center.y;

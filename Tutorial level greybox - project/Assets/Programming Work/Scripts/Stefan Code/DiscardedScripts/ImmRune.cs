@@ -19,6 +19,8 @@ public class ImmRune : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        
+    immobilised = false;
         runeInventory = GameObject.Find("RuneImage").GetComponent<RuneInventory>();
     }
 	

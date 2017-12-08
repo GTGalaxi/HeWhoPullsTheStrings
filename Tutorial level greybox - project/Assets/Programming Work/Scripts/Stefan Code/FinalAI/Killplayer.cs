@@ -31,6 +31,7 @@ public class Killplayer : MonoBehaviour {
             lossState = GameObject.Find("LossState");
             GameObject lossCanvas = lossState.transform.GetChild(0).gameObject;
             lossCanvas.SetActive(true);
+            Cursor.visible = true;
             thePlayer.GetComponent<Player_Movement>().enabled = false;
         }
     }
